@@ -1,0 +1,16 @@
+.article {
+    &__thumbnail{
+        display: block;
+    }
+    &--blog-post {
+        h2, p{
+            max-width: rem(550);
+        }
+        h2{
+            line-height: 1.5;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}

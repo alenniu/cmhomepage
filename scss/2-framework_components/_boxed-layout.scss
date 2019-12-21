@@ -1,0 +1,29 @@
+// DESCRIPTION:
+// Add the class "boxed-layout" to the <body> element.
+/*---- Boxed Layout ----*/
+body.boxed-layout {
+    background: #f8f9fb;
+    background-repeat: repeat;
+    .main {
+        max-width: $box-layout-width;
+        margin-right: auto;
+        margin-left: auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+        position: relative;
+        overflow: hidden;
+    }
+    .navbar {
+        max-width: $box-layout-width;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .footer--fixed{
+        position: relative;
+        z-index: initial;
+
+    }
+    .height-emulator{
+        display: none;
+    }
+
+}

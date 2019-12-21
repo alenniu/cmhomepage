@@ -1,0 +1,167 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-family: $font-primary;
+}
+
+h1 {
+  @extend .h1-font;
+}
+
+h2 {
+  @extend .h2-font;
+}
+
+h3 {
+  @extend .h3-font;
+
+}
+
+h4 {
+  @extend .h4-font;
+}
+
+h5 {
+  @extend .h5-font;
+}
+
+h6 {
+  @extend .h6-font;
+}
+
+p {
+  @extend .body-font;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.blockquote {
+  font-family: $font-secondary;
+  font-style: italic;
+  @extend .h6-font;
+  h4 {
+    line-height: 3rem;
+  }
+  h5 {
+    line-height: 2.8rem;
+  }
+
+}
+/**! ----- font Setting (size & line height, spacing etc) ---- **/
+.h1-font {
+  font-size: $h3-size;
+  line-height: $h3-line-height;
+
+  @include media(md) {
+    font-size: $h1-size;
+    line-height: $h1-line-height;
+  }
+}
+
+.h2-font {
+  font-size: $h3-size;
+  line-height: $h3-line-height;
+
+  @include media(md) {
+    font-size: $h2-size;
+    line-height: $h2-line-height;
+  }
+}
+
+.h3-font {
+  font-size: $h3-size;
+  line-height: $h3-line-height;
+}
+
+.h4-font {
+  font-size: $h4-size;
+  line-height: $h4-line-height;
+}
+
+.h5-font {
+  font-size: $h5-size;
+  line-height: $h5-line-height;
+}
+
+.h6-font {
+  font-size: $h6-size;
+  line-height: $h6-line-height;
+}
+
+.lead {
+  font-size: $h6-size;
+  line-height: $h6-line-height;
+  font-weight: 600;
+}
+
+.body-font {
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+}
+
+.font-size-14 {
+  font-size: $font-size-14;
+}
+
+.font-size-21 {
+  font-size: $font-size-21;
+}
+
+.type--underline {
+  text-decoration: underline;
+}
+
+.type--fine-print {
+  font-size: $fine-print-size;
+}
+
+.font-space-1 {
+  letter-spacing: 1.3px;
+}
+
+.bullet {
+  display: list-item;
+}
+
+.form,
+.button-group,
+.btn {
+  +span.type--fine-print {
+    margin-top: rem(13);
+
+  }
+}
+
+/**! ----- Font weight ---- **/
+.font-w {
+  &-300 {
+    font-weight: 300 !important;
+  }
+
+  &-400 {
+    font-weight: 400 !important;
+  }
+
+  &-500 {
+    font-weight: 500 !important;
+  }
+
+  &-600 {
+    font-weight: 600 !important;
+  }
+
+  &-700 {
+    font-weight: 700 !important;
+  }
+  &-900 {
+    font-weight: 900 !important;
+  }
+}
+

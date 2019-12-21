@@ -1,0 +1,115 @@
+// MARKUP:
+// 
+// <form class="form form--sm">
+//     <div class="form-row mb-20">
+//         <div class="form-group col-sm-12 col-md-6">
+//             <label class="label-control mb-10" for="name">Your Name*</label>
+//             <input type="text" class="form-control" id="name" placeholder="i.e. John Doe" required>
+//         </div>
+//         <div class="form-group col-sm-12 col-md-6">
+//             <label class="label-control mb-10" for="phone">Your Phone Number</label>
+//             <input type="text" class="form-control" id="phone" placeholder="+(123)123 456">
+//         </div>
+//     </div>
+//     <div class="form-row mb-20">
+//         <div class="form-group col-sm-12">
+//             <label class="label-control mb-10" for="message">Your Message</label>
+//             <textarea class="form-control" id="message" rows="4" placeholder="i.e. The design is...." required></textarea>
+//         </div>
+//     </div>
+//     <div class="form-row">
+//         <div class="form-group col-sm-12 text-center">
+//             <button type="submit" class="btn btn--bg-primary btn-splash-hover btn-3d-hover">
+//                 <spanclass="btn__text">Submit</span>
+//             </button>
+//         </div>
+//     </div>
+// </form>
+// 
+// MODIFIERS: form--sm - to reduce the input field height
+
+
+.form {
+    &-row{
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+    .form-row>.col, .form-row>[class*="col-"] {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    &-control {
+        background: $color-white;
+        color: $color-on-light-primary;
+        padding: rem(0) rem(25);
+        font-size: rem(18);
+        border: none;
+        box-shadow: 0 0 0 1px #ddd;
+        width: 100%;
+        height: rem(75);
+        line-height: rem(75);
+        @extend .rounded-default;
+
+        .form--sm & {
+            height: rem(55);
+            line-height: rem(55);
+
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 1px #ddd;
+            outline: none;
+            border: none;
+        }
+    }
+    textarea.form-control{
+        height: auto;
+    }
+
+    .label-control{
+        color: $color-on-light-primary;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: rem(13)
+
+    }
+
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+
+    }
+    
+}
+
+/**! ----- Newsletter Subscription form---- **/
+.form-subscription {
+    .form-control {
+        @extend .box-shadow-1;
+        &:focus {
+            @extend .box-shadow-1;
+    }
+
+    }
+
+    .btn {
+        height: rem(75);
+        border-#{$left}: 1px solid $very-light-blue;
+        @include pos-abs(0, 0, 0, auto);
+        z-index: 5;
+        @include mediaMax(sm) {
+            padding-right: rem(17);
+            padding-left: rem(17);
+            font-size: rem(14);
+        }
+    }
+
+    &.form--sm{
+        .btn {
+            height: rem(55);
+            font-size: rem(14);
+        }
+
+    }
+}

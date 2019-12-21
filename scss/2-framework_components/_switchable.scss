@@ -1,0 +1,58 @@
+// MARKUP:
+// <section class="space-bottom switchable d-md-flex align-items-md-center">
+// <div class="col-md-6 pl-md-0 mb-40 mb-md-0 text-center text-md-left">
+//     <picture class="switchable__image">
+//         ...
+//     </picture>
+// </div>
+// <div class="switchable__text">
+//     <div class="container">
+//         <div class="row">
+//             <div class="col-12 text-center text-md-left ml-md-auto">
+//                 ....
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// </section>
+
+
+.switchable {
+	&__image {
+		width: 100%;
+
+		@include media(md) {
+			padding-#{$right}: rem(15);
+
+		}
+
+		@include media(lg) {
+			padding-#{$right}: rem(50);
+		}
+
+		@include media(xl) {
+			padding-#{$right}: rem(120);
+		}
+
+		@include mediaMax(md) {
+			max-width: 540px;
+			margin-#{$right}: auto;
+			margin-#{$left}: auto;
+		}
+
+		img {
+			box-shadow: 0 32px 54px rgba(62, 106, 161, 0.11);
+			border-radius: 5px;
+			width: 100%;
+
+			@include media(md) {
+				border-radius: 0 5px 5px 0;
+			}
+		}
+	}
+	&__text {
+		@include media(md) {
+			max-width: 475px;
+		}
+	}
+}

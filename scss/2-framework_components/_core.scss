@@ -1,0 +1,90 @@
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    @include font-face($font-all);
+	color: $color-on-light-secondary;
+    margin: 0;
+    overflow-x: hidden;
+
+}
+
+html {
+    @include mediaMax(lg) {
+        font-size: 87.5%;
+    }
+}
+@include rtl {
+    html {
+        direction: $dir;
+
+    }
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ul,
+ol {
+    list-style: none;
+    padding-#{$left}: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    &:focus {
+        outline: 0;
+    }
+}
+
+picture {
+    display: inline-block;
+}
+
+span {
+    display: inline-block;
+}
+
+svg {
+    display: block;
+}
+
+input,
+textarea {
+    @include input-placeholder {
+        color: lighten($color: $color-on-light-secondary, $amount: 15)!important;
+        font-size: 16px;
+    }
+    padding: 0;
+    &:focus {
+        outline: 0;
+    }
+}
+
+table {
+    border-collapse: collapse;
+}
+section{
+    position: relative;
+}

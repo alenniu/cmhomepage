@@ -1,0 +1,170 @@
+// MODIFIERS:
+//............
+// .hero--reverse - to change the content direction
+
+.hero {
+    position: relative;
+    padding-top: $standard-space/1.5;
+    z-index: 1;
+
+    @include media(lg) {
+        padding-top: $standard-space *1.6;
+
+        &.space--lg {
+            padding-top: $standard-space *2.4;
+            padding-bottom: $standard-space *1.8;
+
+        }
+
+        &.space-top--md {
+            padding-top: $standard-space *1.2;
+
+        }
+    }
+
+    &--dark {
+        color: $color-white;
+    }
+
+    &__shape {
+        @include pos-abs(auto, 0, -1px, 0);
+        z-index: -1;
+
+        @include rtl {
+            transform: scaleX(-1);
+        }
+    }
+
+    &__tri-svg {
+        @include customMedia(1921) {
+            top: rem(-300);
+        }
+    }
+
+    &-content {
+        max-width: rem(530);
+
+        @include mediaMax(lg) {
+            margin-top: rem(50);
+            text-align: center;
+            margin: 0 auto;
+
+        }
+
+        .hero--reverse & {
+            @include media(lg) {
+                margin-#{$left}: auto;
+            }
+
+        }
+
+        &--center {
+            max-width: 100%;
+        }
+
+        .btn {
+            &:hover {
+                .media-player-icon--fill-grey {
+                    @extend .color-primary;
+                    background: $color-white;
+                }
+            }
+        }
+    }
+
+    &__image {
+        max-width: rem(700);
+
+        @include mediaMax(lg) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &.push-out-container {
+
+            @include media(lg) {
+                position: absolute;
+                #{$right}: rem(-350);
+            }
+
+            @include media(xl) {
+                #{$right}: rem(-200);
+            }
+
+            .hero--reverse & {
+                @include media(lg) {
+                    #{$left}: rem(-350);
+                }
+
+                @include media(xl) {
+                    #{$left}: rem(-200);
+                }
+
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(20);
+        font-weight: 900;
+        @extend .h3-font;
+        line-height: $h3-line-height;
+
+        @include media(md) {
+            font-size: $h2-size;
+            line-height: $h2-line-height;
+
+        }
+
+        .hero--dark & {
+            color: $color-white;
+        }
+    }
+
+    &__description {
+        margin-bottom: rem(33);
+
+        .hero--dark & {
+            color: $color-white;
+            opacity: .75;
+        }
+    }
+}
+
+.type--fine-print {
+    .hero--dark & {
+        color: $iron;
+    }
+
+    &.color-white {
+        color: $color-white;
+    }
+
+}
+.hero__block5{
+    @include rtl {
+        transform: scaleX(-1);
+    }
+    .svg-clipped {
+        -webkit-clip-path: url(#svgPath);
+        clip-path: url(#svgPath);
+        height: 100%;
+    }
+}
+.hero__block5-mobile {
+    width: rem(320);
+    height: rem(320);
+    border-radius: 100%;
+
+    @include media(sm) {
+        width: rem(500);
+        height: rem(500);
+
+    }
+
+    @include media(lg) {
+        width: rem(440);
+        height: rem(440);
+    }
+}
+

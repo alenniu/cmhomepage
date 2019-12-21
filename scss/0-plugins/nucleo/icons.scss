@@ -1,0 +1,168 @@
+/*------------------------
+	icons
+-------------------------*/
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}
+
+$icon-archery-target: unicode(ea01);
+$icon-bill: unicode(ea02);
+$icon-book-open-2: unicode(ea03);
+$icon-building: unicode(ea04);
+$icon-button-circle-play: unicode(ea05);
+$icon-cursor-pointer: unicode(ea06);
+$icon-email: unicode(ea07);
+$icon-favourite-31: unicode(ea08);
+$icon-grid-45: unicode(ea09);
+$icon-headset: unicode(ea0a);
+$icon-home-3: unicode(ea0b);
+$icon-hotel: unicode(ea0c);
+$icon-hybrid: unicode(ea0d);
+$icon-layout-11: unicode(ea0e);
+$icon-p-heart: unicode(ea0f);
+$icon-phone-2: unicode(ea10);
+$icon-pin-2: unicode(ea11);
+$icon-pin-3: unicode(ea12);
+$icon-preferences-circle: unicode(ea13);
+$icon-recipe: unicode(ea14);
+$icon-responsive: unicode(ea15);
+$icon-settings: unicode(ea16);
+$icon-sofa: unicode(ea17);
+$icon-spaceship: unicode(ea18);
+$icon-stre-left: unicode(ea19);
+$icon-stre-right-2: unicode(ea1a);
+$icon-stre-right: unicode(ea1b);
+$icon-tail-left: unicode(ea1c);
+$icon-tail-right-2: unicode(ea1d);
+$icon-tail-right: unicode(ea1e);
+$icon-triangle-left-18: unicode(ea1f);
+$icon-triangle-right-17: unicode(ea20);
+
+.icon-archery-target::before {
+  content: $icon-archery-target;
+}
+
+.icon-bill::before {
+  content: $icon-bill;
+}
+
+.icon-book-open-2::before {
+  content: $icon-book-open-2;
+}
+
+.icon-building::before {
+  content: $icon-building;
+}
+
+.icon-button-circle-play::before {
+  content: $icon-button-circle-play;
+}
+
+.icon-cursor-pointer::before {
+  content: $icon-cursor-pointer;
+}
+
+.icon-email::before {
+  content: $icon-email;
+}
+
+.icon-favourite-31::before {
+  content: $icon-favourite-31;
+}
+
+.icon-grid-45::before {
+  content: $icon-grid-45;
+}
+
+.icon-headset::before {
+  content: $icon-headset;
+}
+
+.icon-home-3::before {
+  content: $icon-home-3;
+}
+
+.icon-hotel::before {
+  content: $icon-hotel;
+}
+
+.icon-hybrid::before {
+  content: $icon-hybrid;
+}
+
+.icon-layout-11::before {
+  content: $icon-layout-11;
+}
+
+.icon-p-heart::before {
+  content: $icon-p-heart;
+}
+
+.icon-phone-2::before {
+  content: $icon-phone-2;
+}
+
+.icon-pin-2::before {
+  content: $icon-pin-2;
+}
+
+.icon-pin-3::before {
+  content: $icon-pin-3;
+}
+
+.icon-preferences-circle::before {
+  content: $icon-preferences-circle;
+}
+
+.icon-recipe::before {
+  content: $icon-recipe;
+}
+
+.icon-responsive::before {
+  content: $icon-responsive;
+}
+
+.icon-settings::before {
+  content: $icon-settings;
+}
+
+.icon-sofa::before {
+  content: $icon-sofa;
+}
+
+.icon-spaceship::before {
+  content: $icon-spaceship;
+}
+
+.icon-stre-left::before {
+  content: $icon-stre-left;
+}
+
+.icon-stre-right-2::before {
+  content: $icon-stre-right-2;
+}
+
+.icon-stre-right::before {
+  content: $icon-stre-right;
+}
+
+.icon-tail-left::before {
+  content: $icon-tail-left;
+}
+
+.icon-tail-right-2::before {
+  content: $icon-tail-right-2;
+}
+
+.icon-tail-right::before {
+  content: $icon-tail-right;
+}
+
+.icon-triangle-left-18::before {
+  content: $icon-triangle-left-18;
+}
+
+.icon-triangle-right-17::before {
+  content: $icon-triangle-right-17;
+}
+

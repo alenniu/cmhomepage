@@ -1,0 +1,75 @@
+/**! ----- carousel pagination ---- **/
+.slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: rem(20);
+
+    &--long {
+        height: rem(9);
+        width: rem(78);
+        margin-right: rem(9);
+        margin-left: rem(9);
+        border-radius: 100px;
+        background: rgba(255, 255, 255, 0.2);
+
+        .slick-active & {
+            @extend %bg-color-primary;
+
+        }
+    }
+}
+
+/**! ----- Universal pagination IE. Blog post page ---- **/
+// MARKUP:
+// 
+// <nav class="d-flex justify-content-center" aria-label="Page navigation">
+// <ul class="pagination">
+//     <li class="page-item"><a class="page-link" href="#"><i class="fa fa-long-arrow-left mr-10"></i>Previous</a></li>
+//     <li class="page-item"><a class="page-link" href="#">1</a></li>
+//     <li class="page-item"><a class="page-link" href="#">2</a></li>
+//     <li class="page-item active"><a class="page-link" href="#">...</a></li>
+//     <li class="page-item"><a class="page-link" href="#">10</a></li>
+//     <li class="page-item"><a class="page-link" href="#">Next<i class="fa fa-long-arrow-right ml-10"></i></a></li>
+// </ul>
+// </nav>
+
+
+.pagination {
+    list-style: none!important;
+    .page-item {
+        .page-link {
+            border: 0;
+            color: $color-on-light-secondary-2;
+            font-weight: 700;
+            transition: .3s;
+            border-radius: rem(5);
+            box-shadow: none;
+            padding: rem(10) rem(15);
+
+            &:hover {
+                @extend %color-primary;
+            }
+        }
+
+        &.active {
+            .page-link {
+                @extend %bg-color-primary;
+                color: $color-white!important;
+            }
+
+        }
+
+        &:not(:first-child) {
+            .page-link {
+                margin-#{$left}: rem(5);
+            }
+        }
+
+        &:not(:last-child) {
+            .page-link {
+                margin-#{$right}: rem(5);
+            }
+        }
+    }
+}

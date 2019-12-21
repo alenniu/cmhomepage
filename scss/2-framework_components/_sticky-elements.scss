@@ -1,0 +1,23 @@
+.sticky-elements {
+    &--on {
+            @include media(md) {
+                    position: fixed;
+                    width: rem(300);
+                    top: rem(30);
+            }
+
+            @include media(lg) {
+                    width: rem(350);
+            }
+    }
+
+    .nav-link {
+            color: $iron;
+
+            &:hover,
+            &.active {
+                    color: $color-white;
+            }
+    }
+
+}

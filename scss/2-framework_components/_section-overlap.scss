@@ -1,0 +1,62 @@
+// DESCRIPTION
+// 
+// There are some sections especially in home variation -2 where one section is overlapped with another. This markup helps to bring the section in visual easily. Basically the markup simply occupy the space and fill up with a background color.
+// 
+// MARKUP:
+// 
+// <div class="overlap overlap--white z-index1"></div>
+// 
+// MODIFIERS:
+// overlap--xl - for maximum height
+// overlap--lg - for larger height
+// overlap--white - White bg of the shape
+// overlap--gray - gray bg of the shape
+// overlap--darkblue - darkblue bg of the shape
+// overlap--midnight - midnight bg of the shape
+
+.overlap {
+    @include pos-abs(auto, auto, 0, auto, );
+    height: rem(80);
+    width: 100%;
+
+    @include media(md) {
+        height: rem(120);
+    }
+
+    &--lg {
+        @include media(md) {
+            height: rem(150);
+        }
+    }
+
+    &--xl {
+        @include media(md) {
+            height: rem(200);
+        }
+    }
+
+    &--white {
+        background: $color-white;
+    }
+
+    &--gray {
+        background: $pale-grey;
+    }
+
+    &--darkblue {
+        background: $darkblue;
+    }
+
+    &--midnight {
+        background: $midnight;
+    }
+}
+
+.oval {
+    height: rem(475);
+    width: rem(475);
+    @extend %bg-color-primary;
+    border-radius: 100%;
+    #{$right}: 0;
+    overflow: hidden;
+}

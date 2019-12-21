@@ -1,0 +1,417 @@
+// /**--------- FONT FAMILY --------*/
+@mixin font-face($font) {
+  font-family: $font;
+}
+
+// /**--------- END FONT FAMILY --------*/
+
+/**--------- Start OF Direction Mixin--------*/
+$dir: ltr !default;
+
+// Default $dir if not valid
+@if $dir !=ltr and $dir !=rtl {
+  $dir: ltr;
+}
+
+@function ltr($if, $else: null) {
+  @if $dir !=rtl {
+    @return $if;
+  }
+
+  @else {
+    @return $else;
+  }
+}
+
+@function rtl($if, $else: null) {
+  @return ltr($else, $if);
+}
+
+$left: ltr(left, right);
+$right: ltr(right, left);
+
+@function dir-values($values) {
+  @if $dir==rtl and length($values)==4 {
+    // Reorder right and left positions in list
+    @return nth($values, 1) nth($values, 4) nth($values, 3) nth($values, 2);
+  }
+
+  @else {
+    @return $values;
+  }
+}
+
+@mixin ltr {
+  @if $dir !=rtl {
+    @content;
+  }
+}
+
+@mixin rtl {
+  @if $dir==rtl {
+    @content;
+  }
+}
+
+
+//  EXAMPLE OF USAGE:
+
+// section {
+//     // define here inline your rtl conditions
+//     margin-#{$left}: 10px;
+//     @include ltr {
+//     float: left;
+
+//     }
+//     @include rtl {
+//       float: right;
+//     }
+//   }
+/**--------- END OF Direction Mixin--------*/
+
+// /**--------- START OF MEDIA QUERY --------*/
+@mixin customMedia($width) {
+  @media only screen and (min-width: ($width+px)) {
+    @content;
+  }
+}
+
+@mixin customMediaMax($width) {
+  @media only screen and (max-width: ($width+px)) {
+    @content;
+  }
+}
+
+//  EXAMPLE OF USAGE:
+// 
+// @inclue customMedia(992){...}
+// @inclue customMediaMax(991){...}
+
+// FIXED VALUE MEDIA QUERY
+@mixin media($query) {
+  @if $query==xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $query==lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $query==md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $query==sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+}
+
+@mixin mediaMax($query) {
+  @if $query==xl {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
+
+  @else if $query==lg {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @else if $query==md {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $query==sm {
+    @media (max-width: 575px) {
+      @content;
+    }
+  }
+}
+
+//  EXAMPLE OF USAGE:
+// 
+//   @include media(xl) {
+//     background: blue;
+//   }
+
+// /**--------- END OF MEDIA QUERY --------*/
+
+// /**--------- START OF PLACEHOLDER TEXT COLOR --------*/
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+//  EXAMPLE OF USAGE:
+// 
+// input{
+//     @include input-placeholder {
+//         color: #888;
+//     }
+// }
+
+// /**--------- END OF PLACEHOLDER TEXT COLOR --------*/
+
+// /**--------- START OF ARROW WITH FOUR OPTIONAL DIRECTIONS --------*/
+@mixin arrow($direction: down, $size: 5, $color: #555) {
+  width: 0;
+  height: 0;
+
+  @if ($direction==left) {
+    border-top: $size + px solid transparent;
+    border-bottom: $size + px solid transparent;
+    border-#{$right}: $size + px solid $color;
+  }
+
+  @else if ($direction==right) {
+    border-top: $size + px solid transparent;
+    border-bottom: $size + px solid transparent;
+    border-#{$left}: $size + px solid $color;
+  }
+
+  @else if ($direction==down) {
+    border-left: $size + px solid transparent;
+    border-right: $size + px solid transparent;
+    border-top: $size + px solid $color;
+  }
+
+  @else {
+    border-left: $size + px solid transparent;
+    border-right: $size + px solid transparent;
+    border-bottom: $size + px solid $color;
+  }
+}
+
+
+
+//  EXAMPLE OF USAGE:
+// 
+// without arguments (default)
+//  
+// div { 
+//     @include arrow(); 
+//  }
+
+// with custom arguments
+//  
+//  div {
+//     @include arrow(up, 10, #efefef);
+//  }
+
+
+//  COMPILED CSS:
+// without arguments (default)
+// 
+// div {
+//     width: 0;
+//     height: 0;
+//     border-left: 5px solid transparent;
+//     border-right: 5px solid transparent;
+//     border-top: 5px solid #555;
+//  }
+
+// with custom arguments
+//  
+//  div {
+//     width: 0;
+//     height: 0;
+//     border-left: 10px solid transparent;
+//     border-right: 10px solid transparent;
+//     border-bottom: 10px solid #efefef;
+//  }
+//--------- END OF ARROW WITH FOUR OPTIONAL DIRECTIONS --------//
+
+
+//--------- START OF ABSOLUTE POSITIONING --------//
+@mixin pos-abs ($top, $right, $bottom, $left) {
+  position: absolute !important;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+
+  @include rtl {
+    right: $left;
+    left: $right;
+
+  }
+}
+
+
+//  EXAMPLE OF USAGE:
+// 
+// .class-name {
+//     @include pos-abs(100px, 100px, auto, auto);
+//  }
+
+//  COMPILED CSS:
+// 
+// .class-name {
+//    position: absolute;
+//    top: 100px;
+//    right: 100px;
+//    bottom: auto;
+//    left: auto;
+// }
+// /**--------- END OF ABSOLUTE POSITIONING --------*/
+
+
+// /**--------- START OF CENTER POSITIONING --------*/
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute !important;
+
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    #{$left}: 50%;
+
+    @include ltr {
+      transform: translate(-50%, -50%);
+    }
+
+    @include rtl {
+      transform: translate(50%, -50%);
+
+    }
+  }
+
+  @else if ($horizontal) {
+    #{$left}: 50%;
+
+    @include ltr {
+      transform: translate(-50%, 0);
+    }
+
+    @include rtl {
+      transform: translate(50%, 0);
+
+    }
+  }
+
+  @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+//  EXAMPLE OF USAGE:
+// 
+//   .parent {
+//       position: relative;
+//   }
+// .child {
+//     &.both {
+//       @include centerer;
+//     }
+//     &.horizontal {
+//       @include centerer(true, false);
+//     }
+//     &.vertical {
+//       @include centerer(false, true);
+//     }
+//   }
+
+
+//  COMPILED CSS:
+// 
+// .parent {
+//     position: relative;
+//   }
+//   .child.both {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+//   .child.horizontal {
+//     position: absolute;
+//     left: 50%;
+//     transform: translate(-50%, 0);
+//   }
+//   .child.vertical {
+//     position: absolute;
+//     top: 50%;
+//     transform: translate(0, -50%);
+//   }
+// /**--------- END OF CENTER POSITIONING --------*/
+
+/**--------- Start OF Margin & Padding Helpers--------*/
+// This .scss loop will create "margin helpers" and "padding helpers" for use in your web projects.
+// It will generate several classes such as:
+// .mr-10 which gives margin-right 10 pixels.
+// .pb-50 gives PADDING to the BOTTOM of 50 pixels
+// The first letter is "m" or "p" for MARGIN or PADDING
+// Second letter is "t", "b", "l", or "r" for TOP, BOTTOM, LEFT, or RIGHT
+// Third letter is the number of spacing in pixels. Adjust the amounts generated by editing the $spaceamounts variable below.
+
+
+@mixin margin-padding-helper {
+  $spaceamounts: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100); // Adjust this to include the pixel amounts you need.
+  $sides: (top, bottom); // Leave this variable alone
+
+  @each $space in $spaceamounts {
+
+    // top and bottom
+    @each $side in $sides {
+      .m#{str-slice($side, 0, 1)}-#{$space} {
+        margin-#{$side}: #{$space /$base-unit}rem;
+      }
+
+      .p#{str-slice($side, 0, 1)}-#{$space} {
+        padding-#{$side}: #{$space /$base-unit}rem;
+      }
+    }
+
+    // right
+    @each $side in right {
+      .m#{str-slice(right, 0, 1)}-#{$space} {
+        margin-#{$right}: #{$space /$base-unit}rem;
+      }
+
+      .p#{str-slice(right, 0, 1)}-#{$space} {
+        padding-#{$right}: #{$space /$base-unit}rem;
+      }
+
+    }
+
+    // left
+    @each $side in left {
+      .m#{str-slice(left, 0, 1)}-#{$space} {
+        margin-#{$left}: #{$space /$base-unit}rem;
+      }
+
+      .p#{str-slice(left, 0, 1)}-#{$space} {
+        padding-#{$left}: #{$space /$base-unit}rem;
+      }
+
+    }
+  }
+}

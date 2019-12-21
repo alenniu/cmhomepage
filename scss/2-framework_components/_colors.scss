@@ -1,0 +1,217 @@
+/**! ----- Common colors (SCSS extend) ---- **/
+%bg-color-primary {
+	background: $color-primary;
+}
+
+%color-primary {
+	color: $color-primary;
+}
+
+
+%box-shadow-primary {
+	box-shadow: 0px 2px 0px $color-primary;
+}
+
+.border-primary {
+	border-color: $color-primary;
+}
+
+/**! ----- svg fill color ---- **/
+%fill-primary {
+	fill: $color-primary;
+}
+
+.bg-fill-primary {
+	@extend %fill-primary;
+}
+
+/**! ----- light theme theme background ---- **/
+.main {
+	background: $color-white;
+}
+
+/**! ----- Dark theme color ---- **/
+#{$theme-dark} {
+	color: $color-on-light-secondary-2;
+
+	.main {
+		background: $midnight;
+	}
+}
+
+/**! ----- Color palette ---- **/
+.bg-color-midnight {
+	background: $midnight;
+}
+
+.bg-color-darkblue {
+	background: $darkblue;
+}
+
+.bg-color-darkgrey {
+	background: $dark-grey;
+}
+
+.bg-color-primary {
+	@extend %bg-color-primary;
+}
+
+.bg-color-grey {
+	background-color: $pale-grey;
+}
+
+.bg-color-coral {
+	background-color: $coral;
+
+	&.badge {
+		color: $color-white;
+	}
+}
+
+.bg-gradient-1 {
+	background: $gradient-1;
+}
+
+.bg-gradient-2 {
+	background: $gradient-2;
+}
+
+.bg-gradient-3 {
+	background: $gradient-3;
+}
+
+.bg-gradient-4 {
+	background: $gradient-4;
+}
+
+.bg-gradient-5 {
+	background: $gradient-5;
+}
+
+.bg-gradient-6 {
+	background: $gradient-6;
+}
+
+.color-primary {
+	@extend %color-primary;
+}
+
+.color-white {
+	color: $color-white;
+
+	#{$theme-dark} & {
+		color: $color-white;
+	}
+}
+
+.color-light-primary {
+	color: $color-on-light-primary !important;
+}
+
+.color-light-secondary {
+	color: $color-on-light-secondary;
+
+	#{$theme-dark} & {
+		color: $color-on-light-secondary;
+	}
+
+}
+
+.color-light-secondary-2 {
+	color: $color-on-light-secondary-2;
+
+	#{$theme-dark} & {
+		color: $color-on-light-secondary-2;
+	}
+
+}
+
+.icon-color-white {
+	color: $color-white;
+
+	* {
+		color: $color-white;
+	}
+}
+
+/**! ----- Typography Color Settings ---- **/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $color-on-light-primary;
+}
+
+h1,
+h2,
+h3 {
+
+	.bg-color-primary &,
+	[class*="bg-gradient"] & {
+		color: $color-white;
+	}
+}
+
+#{$theme-dark},
+.bg--dark,
+.bg-color-darkblue,
+.bg-color-darkgrey {
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: $color-white;
+	}
+}
+
+p {
+	color: $color-on-light-secondary;
+
+	#{$theme-dark} &,
+	.bg--dark &,
+	.bg-color-darkgrey &,
+	.bg-color-darkblue & {
+		color: $color-on-light-secondary-2;
+	}
+
+	.bg-color-primary &,
+	[class*="bg-gradient"] & {
+		color: $iron;
+	}
+
+}
+
+.lead {
+	color: $color-on-light-secondary-2;
+
+	.bg-color-primary &,
+	[class*="bg-gradient"] & {
+		color: $light-blue-grey;
+	}
+}
+
+.type--fine-print {
+
+	.bg-color-primary &,
+	[class*="bg-gradient"] & {
+		color: $iron;
+	}
+}
+
+.blockquote {
+
+	.bg--dark &,
+	.bg-color-darkgrey &,
+	.bg-color-darkblue & {
+		color: $light-blue-grey;
+
+		h4,
+		h5 {
+			color: $light-blue-grey;
+		}
+	}
+
+}
