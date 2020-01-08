@@ -241,13 +241,13 @@
             responsive: [{
                     breakpoint: 500,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 1,
                     }
                 },
                 {
                     breakpoint: 992,
                     settings: {
-                        slidesToShow: 3,
+                        slidesToShow: 1,
                     }
                 },
             ]
@@ -256,7 +256,7 @@
         $(".features--slider-2 .slider-contents").slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: false,
+            autoplay: true,
             asNavFor: '.features--slider-2 .slider-tabs',
             prevArrow: '<button type="button" class="slick-prev"><i class="icon icon-triangle-left-18 icon-color-white"></i></button>',
             nextArrow: '<button type="button" class="slick-next"><i class="icon icon-triangle-right-17 icon-color-white"></i></button>',
