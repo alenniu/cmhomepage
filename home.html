@@ -21,8 +21,39 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 
-<body class="gradient-1" data-spy="scroll" data-target="#navbar-nav">
 
+<body class="gradient-1" data-spy="scroll" data-target="#navbar-nav" onload="myFunction()">
+
+    <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="/node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <script>
+        
+    
+    function myFunction() {
+       
+        Swal.fire({
+  title: 'Check out our new COVID-19 Relief Campaign',
+  text: "Support our health care workers in these times.",
+  icon: 'info',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Lets Go!'
+}).then((result) => {
+  if (result.value) {
+    Swal.fire(
+      'Taking you there now!',
+      'Thank you for supporting our community.',
+      'success'
+    )
+    setTimeout(function(){ window.location.assign("http://cloudmates.ca/campaign.html"); }, 1500);
+   ;
+  
+  }
+})
+    }
+   
+        </script>
     <!-- =========== Preloader Start ============ -->
     <div class="preloader-main">
         <div class="preloader-wapper">
@@ -182,6 +213,12 @@
                         <!-- end of nav menu items -->
                     </nav>
                 </div>
+                <div class="flex-row ml-lg-auto d-md-flex mr-90 mr-lg-0 d-none d-sm-inline-block">
+                    <a href="campaign.html" style="background-color:orange" class="btn rounded-full btn--outline btn--md btn-3d-hover btn-splash-hover ">
+                        <span class="btn__text">COVID-19 CAMPAIGN</span> 
+                    </a>
+                </div>
+
                 <div class="flex-row ml-lg-auto d-md-flex mr-70 mr-lg-0 d-none d-sm-inline-block">
                     <a href="logintoschool.html" class="btn rounded-full btn--outline btn--sm btn-3d-hover btn-splash-hover ">
                         <span class="btn__text">Login</span> 
@@ -334,7 +371,7 @@
                         <h3 class="mb-20 font-w-400">CloudMates allows you to organize your school clubs, teams, and events.</h3>
                         <p class="mb-40">Forgot your next club meeting? Forget the date of your next sports game? Wanna host an event? With CloudMates, you can easily
                             organize everything clearly in one central place. </p>
-                        <a href="#" class="btn btn--transparent p-0 btn--arrow-after btn--color-dark btn-border-hover">
+                        <a href="contact.html" class="btn btn--transparent p-0 btn--arrow-after btn--color-dark btn-border-hover">
                             <span class="btn__text mr-30">Find out more</span>
                         </a>
                     </div>
@@ -482,7 +519,7 @@
                                 <p class="mb-40">View and Interact with all of your School Resources of Students. Anyone 
                                     can take advantage of the community website for the school.
                                 </p>
-                                <a href="#" class="btn btn--transparent btn--arrow-after btn--color-dark btn-border-hover">
+                                <a href="contact.html" class="btn btn--transparent btn--arrow-after btn--color-dark btn-border-hover">
                                     <span class="btn__text mr-30">Get CloudMates Now</span>
                                 </a>
                             </div>
@@ -498,7 +535,7 @@
                                 <h5 class="mb-10">Fast Management, <br> <span class="color-primary">Easy to Organize</span></h5>
                                 <p class="mb-40">You will be able to customize almost everything in a matter of clicks. With enhanced 
                                     moderation tools, the best experience arises..</p>
-                                <a href="#" class="btn btn--transparent btn--arrow-after btn--color-dark btn-border-hover">
+                                <a href="contact.html" class="btn btn--transparent btn--arrow-after btn--color-dark btn-border-hover">
                                     <span class="btn__text mr-30">Find out more</span>
                                 </a>
                             </div>
@@ -591,7 +628,7 @@
                             <h3 class="mb-4 font-w-400">Super clean user <br>interface for easier use. </h3>
                             <p class="mb-5">We have constructed a modern User Interface suitable to students of any school in North America. We love to help students
                                 in the best way possible, so we made our intereface easy to use, feature heavy and simply <b>"Beautiful"</b>.</p>
-                            <a href="#" class="btn rounded-full btn--bg-primary btn-3d-hover btn-splash-hover">View Demo</a>
+                            <a href="contact.html" class="btn rounded-full btn--bg-primary btn-3d-hover btn-splash-hover">View Demo</a>
                         </div>
                     </div>
                 </div>
@@ -643,7 +680,7 @@
                                     <li class="mb-3 color-light-secondary-2">Custom Domain URL</li>
                                     <li class="mb-3 color-light-secondary-2">Email support</li>
                                 </ul>
-                                <a href="#" class="btn btn--sm rounded-full btn--color-primary w-100 btn-3d-hover btn-splash-hover btn--bg-grey">
+                                <a href="contact.html" class="btn btn--sm rounded-full btn--color-primary w-100 btn-3d-hover btn-splash-hover btn--bg-grey">
                                     <span class="btn__text">Choose Plan</span>
                                 </a>
                             </div>
@@ -672,7 +709,7 @@
                                     <li class="mb-3 color-light-secondary-2">Designated Duo Service</li>
                                     <li class="mb-3 color-light-secondary-2">Text/Call/Email Support</li>
                                 </ul>
-                                <a href="#" class="btn btn--sm rounded-full w-100 btn-3d-hover btn-splash-hover btn--bg-white">
+                                <a href="contact.html" class="btn btn--sm rounded-full w-100 btn-3d-hover btn-splash-hover btn--bg-white">
                                     <span class="btn__text">Get started</span>
                                 </a>
                             </div>
@@ -698,7 +735,7 @@
                                     <li class="mb-3 color-light-secondary-2">Mobile Compatability</li>
                                     <li class="mb-3 color-light-secondary-2">Text/Call 24/7 Support</li>
                                 </ul>
-                                <a href="#" class="btn btn--sm rounded-full btn--color-primary w-100 btn-3d-hover btn-splash-hover btn--bg-grey">
+                                <a href="contact.html" class="btn btn--sm rounded-full btn--color-primary w-100 btn-3d-hover btn-splash-hover btn--bg-grey">
                                     <span class="btn__text">Get started</span>
                                 </a>
                             </div>
@@ -722,7 +759,7 @@
                                     <li class="mb-3 color-light-secondary-2">Full Customization</li>
                                     <li class="mb-3 color-light-secondary-2">In Person Team Support</li>
                                 </ul>
-                                <a href="#" class="btn btn--sm rounded-full btn--color-primary w-100 btn-3d-hover btn-splash-hover btn--bg-grey">
+                                <a href="contact.html" class="btn btn--sm rounded-full btn--color-primary w-100 btn-3d-hover btn-splash-hover btn--bg-grey">
                                     <span class="btn__text">Get started</span>
                                 </a>
                             </div>
@@ -880,10 +917,10 @@
                             </span>
                             <p>CloudMates is an amazing school indidually tailored platform for all highschools. We believe in the leaders of our future. Get CloudMates for your school today.</p>
                             <ul class="social-lists d-flex mb-0 mt-30">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="https://twitter.com/cloudmatesCA"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            </ul>
+                                    <li><a href="https://www.instagram.com/cloudmates/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://twitter.com/cloudmatesCA"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
                             <!-- end of social list -->
 
                         </div>
@@ -944,9 +981,9 @@
                         <div class="col-12 d-md-flex justify-content-between align-items-center">
                             <nav class="nav">
                                 <ul class="d-flex mb-md-0">
-                                    <li><a href="#">Status</a></li>
-                                    <li><a href="#">Privacy & Terms</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="contact.html">Status</a></li>
+                                    <li><a href="contact.html">Privacy & Terms</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
                             </nav>
                             <!-- end of mini footer nav -->
