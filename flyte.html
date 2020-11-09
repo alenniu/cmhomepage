@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flyte Food Delivery</title>
+    <!-- favicon CSS -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+    <!-- custom fonts -->
+    <link href="fonts/aileron.css" rel="stylesheet">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="css/plugins.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="" data-spy="scroll" data-target="#navbar-nav">
+
+    <!-- =========== Preloader Start ============ -->
+    <div class="preloader-main">
+        <div class="preloader-wapper">
+            <svg class="preloader" xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="200">
+                <defs>
+                    <filter id="goo" x="-40%" y="-40%" height="200%" width="400%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -8" result="goo" />
+                    </filter>
+                </defs>
+                <g filter="url(#goo)">
+                    <circle class="dot bg-fill-primary " cx="50" cy="50" r="25" />
+                    <circle class="dot" cx="50" cy="50" r="25" fill="#4c83ff" />
+                </g>
+            </svg>
+            <div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+            </div>
+        </div>
+    </div>
+    <!-- =========== Preloader End ============ -->
+    
+    <div class="main">
+        <!-- =========== Start of Navigation (main menu) ============ -->
+        <header class="navbar navbar-sticky navbar-expand-lg navbar-dark">
+            <div class="container position-relative">
+                <a class="navbar-brand mr-70" href="index.html">
+                    <img class="navbar-brand__regular" src="img/ayyy.png" alt="brand-logo">
+                    <img class="navbar-brand__sticky" src="img/ayyy.png" alt="sticky brand-logo">
+                </a>
+                <!--  End of brand logo -->
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- end of Nav toggler -->
+
+                <div class="navbar-inner">
+                    <!--  Nav close button inside off-canvas/ mobile menu -->
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- end of Nav Toggoler -->
+                    <nav>
+                        <ul class="navbar-nav" id="navbar-nav">
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#tabsop">Features</a>
+                            </li> -->
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <b>  Pages</b>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <!-- <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Classic</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-sidebar-right.html">Sidebar Right</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-sidebar-Left.html">Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-grid-2-col-sidebar-right.html">2 Columns Sidebar Right</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-grid-2-col-sidebar-left.html">2 Columns Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-full.html">Full Width</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Card</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-card-2-col.html">Card 2 Columns</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-card-3-col.html">Card 3 Columns</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-card-full.html">Card Full Width</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog List</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-list-sidebar-right.html">List Sidebar Rigt</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-list-sidebar-left.html">List Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-list-full.html">List Full Width</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog
+                                            Details</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-details-sidebar-right.html">Blog Details Sidebar Right</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-details-sidebar-left.html">Blog Details Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-details-full.html">Blog Details Full</a>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                                   
+                                        
+                                            
+                                            <li>
+                                                <a class="dropdown-item" href="logintoschool.html">Available Schools</a>
+                                            </li>
+                                            <li>
+                                                    <a class="dropdown-item" href="aboutus.html">About Us</a>
+                                                </li>
+                                    
+                                    <!-- <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Specialty Pages</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="coming-soon.html">Comming Soon</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="download.html">Download</a>
+                                            </li> 
+                                            <li>
+                                                <a class="dropdown-item" href="subscribe-confirmation.html">Subscribe Confirmation</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="maintenance.html">Maintenance</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="error-404.html">Error 404</a>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                                   
+                                    
+                                    <li>
+                                        <a class="dropdown-item" href="faq.html">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="contact.html">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="team.html">Team</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- end of nav menu items -->
+                    </nav>
+                </div>
+                <div class="flex-row ml-lg-auto d-md-flex mr-60 mr-lg-0 d-none d-sm-inline-block">
+                    <a href="campaign.html" style="background-color:rgba(230, 196, 101, 0.68)" class="btn rounded-full btn--outline btn--md btn-3d-hover btn-splash-hover ">
+                        <span class="btn__text">COVID-19 CAMPAIGN</span> 
+                    </a>
+                </div>
+                <div class="flex-row ml-lg-auto d-md-flex mr-60 mr-lg-0 d-none d-sm-inline-block">
+                    <a href="flyte.html" style="background-color:rgba(101, 183, 230, 0.721)" class="btn rounded-full btn--outline btn--md btn-3d-hover btn-splash-hover ">
+                        <span class="btn__text">Flyte Delivery</span> 
+                    </a>
+                </div>
+                <div class="flex-row ml-lg-auto d-md-flex mr-60 mr-lg-0 d-none d-sm-inline-block">
+                        <a href="tutoring.html" style="background-color:rgba(230, 101, 198, 0.721)" class="btn rounded-full btn--outline btn--md btn-3d-hover btn-splash-hover ">
+                            <span class="btn__text">Tutoring</span> 
+                        </a>
+                    </div>
+
+                <!-- <div  class="flex-row ml-lg-auto d-md-flex mr-70 mr-lg-0 d-none d-sm-inline-block">
+                    <a href="logintoschool.html" class="btn rounded-full btn--outline btn--sm btn-3d-hover btn-splash-hover ">
+                        <span class="btn__text">Login</span> 
+                    </a>
+                </div> -->
+                <!-- end of nav cta button -->
+            </div>
+            <!-- end of container -->
+        </header>
+        <!-- =========== End of Navigation (main menu)  ============ -->
+        
+          <!-- =========== Start of Hero ============ -->
+          <section class="space-top--md space-bottom pb-lg-0 hero hero--reverse hero--dark bg-color-primary">
+            <div class="background-holder opacity-05 z-index-1">
+                <img src="img/hero-8.png" alt="hero-image" class="background-image-holder">
+            </div>
+            <!-- end background image -->
+            <div class="overlap overlap--lg overlap--white z-index-1 d-none d-xl-block"></div>
+            <!-- end of overlap -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-lg-flex align-items-lg-center position-relative">
+                            <picture class="hero__image d-flex justify-content-center mt-50 d-lg-inline-block">
+                                <img style="border-radius: 10%;" src="img/iPhone 8 Plus - 3.png" alt="hero-image">
+                            </picture>
+                            <div class="hero-content">
+                                <h1 class="hero__title">Delicious Food Delivery to Students. Fast. No Fees.</h1>
+                                <p class="lead hero__description">Are you a student looking for delicious, fast and cheap options for lunch? Download our app, and have your food take "Flyte".</p>
+                                <div class="d-flex align-items-center mb-40 justify-content-center justify-content-lg-start">
+                                    <span class="rating__star mr-10">
+                                        <i class="icon icon-favourite-31 active"></i>
+                                        <i class="icon icon-favourite-31 active"></i>
+                                        <i class="icon icon-favourite-31 active"></i>
+                                        <i class="icon icon-favourite-31 active"></i>
+                                        <i class="icon icon-favourite-31 active"></i>
+                                    </span>
+                                    <span>Student Reviews</span>
+                                </div>
+                                <div class="button-group flex-column flex-sm-row align-items-center">
+                                    <a href="https://apps.apple.com/ca/app/flyte-food-delivery/id1498481027" class="mr-sm-3 mb-10 mb-sm-0 box-shadow-2 rounded-md btn-3d-hover transition-default"><img src="img/app-store.png" class="rounded-md" alt="app-store"></a>
+
+                                    <a href="https://play.google.com/store/apps/details?id=com.flyte.flyteapp&hl=en_CA" class="box-shadow-2 rounded-md btn-3d-hover transition-default"><img src="img/google-play.png" class="rounded-md" alt="google-play"></a>
+                                </div>
+                            </div>
+                            <!-- end of content -->
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of Hero ============ -->
+        
+        <!-- =========== Start of Features ============ -->
+        <section class="space-bottom" id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-9 mx-auto">
+                        <div class="section-title reveal text-center mb-80 mb-sm-50">
+                            <h3 style="margin-top: 70px" class="mb-3">Features that bring food to your Mouth</h3>
+                            <p class="lead">If you are craving something specific and dont want to waste time or money, Flyte brings the food straight to your hands.</p>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="features features--slider reveal">
+                            <div class="sub-header">
+                                <div class="swipe-tabs">
+                                    <div class="swipe-tab text-left">
+                                        <div class="swipe-tab__inner d-inline-flex flex-column align-items-center text-center">
+                                            <span class="tab__icon">
+                                                <img src="img/icon-drag.png" alt="icon">
+                                            </span>
+                                            <span class="tab__title font-size-21 font-weight-bold">Tons of Options</span>
+                                        </div>
+                                    </div>
+                                    <!-- end of tab one -->
+                                    <div class="swipe-tab text-center">
+                                        <div class="swipe-tab__inner d-inline-flex flex-column align-items-center text-center">
+                                            <span class="tab__icon d-flex flex-column">
+                                                <img src="img/icon-settings.png" alt="icon">
+                                            </span>
+                                            <span class="tab__title font-size-21 font-weight-bold">Easy to Customize Your Order</span>
+                                        </div>
+                                    </div>
+                                    <!-- end of two one -->
+
+                                    <div class="swipe-tab text-right">
+                                        <div class="swipe-tab__inner d-inline-flex flex-column align-items-center text-center">
+                                            <span class="tab__icon">
+                                                <img src="img/icon-responsive.png" alt="icon">
+                                            </span>
+                                            <span class="tab__title font-size-21 font-weight-bold">Driver to Restaurant</span>
+                                        </div>
+                                    </div>
+                                    <!-- end of tab three -->
+                                </div>
+                            </div>
+                            <!-- end of tabs -->
+                            <div class="main-container">
+                                <div class="swipe-tabs-container">
+                                    <div class="swipe-tab-content d-lg-flex justify-content-md-between align-items-center">
+                                        <picture class="features--tab__image">
+                                            <img style="border-radius: 11%" src="img/Screen Shot 2020-10-02 at 12.59.33 PM.png" alt="browser-image">
+                                        </picture>
+                                        <div class="tab-content">
+                                            <h4 class="tab-content__title mb-30">Endless Options!</h4>
+                                            <ul class="tab-content__list">
+                                                <li>
+                                                    <p>We have put in the work and partnered with many different restaurants around your local area; including some of your favorite fast-food restaraunts.</p>
+                                                </li>
+                                                <li>
+                                                    <p>We haven't forgotten about the delicious other options from all different cultures made available on our app.</p>
+                                                </li>
+                                            </ul>
+                                            <div class="testimonial">
+                                                <blockquote class="blockquote">
+                                                    “Working with Flyte was smooth, natural and support was amazing!”
+                                                </blockquote>
+                                                <span class="font-weight-bold">Clarence Quintela, Manager, McDonalds on Avenue Rd.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end of first tab content -->
+                                    <div class="swipe-tab-content d-lg-flex justify-content-md-between align-items-center">
+                                        <picture class="features--tab__image">
+                                            <img style="border-radius: 11%" src="img/Screen Shot 2020-10-02 at 1.01.59 PM.png" alt="browser-image">
+                                        </picture>
+                                        <div class="tab-content">
+                                            <h4 class="tab-content__title mb-30">Amazing Order Customizations!</h4>
+                                            <ul class="tab-content__list">
+                                                <li>
+                                                    <p>Want lettuce, cheese, poutine with that order? Easily add any customizations right on the app with no extra stress.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Ordering with Flyte will give you the option to have your order just the way you want it.</p>
+                                                </li>
+                                            </ul>
+                                            <div class="testimonial">
+                                                <blockquote class="blockquote">
+                                                    “Okay, I am such a picky eater and I thought that this wouldnt be a good choice, but after seeing so many customization options on the app, with the ability to add sides, condiments, EVERYTHING, I fell in love right away!”
+                                                </blockquote>
+                                                <span class="font-weight-bold">Joseph Ngai, Student, Upper Canada College</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end of second tab content -->
+                                    <div class="swipe-tab-content d-lg-flex justify-content-md-between align-items-center">
+                                        <picture class="features--tab__image">
+                                            <img style="border-radius: 11%" src="img/Screen Shot 2020-10-02 at 1.03.20 PM.png" alt="browser-image">
+                                        </picture>
+                                        <div class="tab-content">
+                                            <h4 class="tab-content__title mb-30">Resturant to Driver to Student!</h4>
+                                            <ul class="tab-content__list">
+                                                <li>
+                                                    <p>We have perfected our ordering procedure. The whole system happens so smooth that when you order in the morning, the food will arrive hot and fresh right at the start of lunch break.</p>
+                                                </li>
+                                                <li>
+                                                    <p>A clear order tracking system allows drivers, restaurants and students to keep track of every order.</p>
+                                                </li>
+                                            </ul>
+                                            <div class="testimonial">
+                                                <blockquote class="blockquote">
+                                                    “I barely had to stress, my phone showed the order very clear, the restaurant gave me the specific order right as I entered, and I delivered it to the student. IT was so simple!”
+                                                </blockquote>
+                                                <span class="font-weight-bold">Howard Hua, Driver, Flyte Food Delivery</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end of third tab content -->
+                                </div>
+                            </div>
+                            <!-- end of tab/ features items -->
+                        </div>
+                        <!-- end of features -->
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+
+        </section>
+        <!-- =========== End of Features ============ -->
+
+        <!-- =========== Start of Process ============ -->
+        <section class="space-top bg-color-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-9 mx-auto">
+                        <div class="section-title reveal text-center mb-80 mb-sm-50">
+                            <h3 class="mb-3">How does Flyte Work?</h3>
+                            <p class="lead">Our process is very organized and clean, allowing students to get their orders on time, hot, fresh and delcicious every single day.</p>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                </div>
+                <!-- end of row -->
+                <div class="working-process reveal">
+                    <div class="row space-bottom border-bottom-light">
+                        <div class="col-12 col-md-4">
+                            <div class="working-process-block text-center">
+                                <span class="mb-30 icon-dotted position-relative">
+                                    <i class="icon icon-pin-2"></i>
+                                </span>
+                                <h4 class="font-size-21 mb-10">
+                                    Order on the App
+                                </h4>
+                                <p>Download the App, select your school, and order from available restaurants on the app.</p>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-12 col-md-4">
+                            <div class="working-process-block text-center">
+                                <span class="mb-30 icon-dotted position-relative">
+                                    <i class="icon icon-layout-11"></i>
+                                </span>
+                                <h4 class="font-size-21 mb-10">
+                                    Customize your Order
+                                </h4>
+                                <p>Using our powerful customization tools, choose how you like your food.</p>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-12 col-md-4">
+                            <div class="working-process-block text-center">
+                                <span class="mb-30 icon-dotted position-relative">
+                                    <i class="icon icon-spaceship"></i>
+                                </span>
+                                <h4 class="font-size-21 mb-10">
+                                    Delivered straight to your Hands
+                                </h4>
+                                <p>When you are done, hit the Order Now and enjoy your delicious lunch!</p>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of working process -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of Process ============ -->
+
+       
+
+        <!-- =========== Start of CTA Content Block ============ -->
+        <section>
+            <div class="container">
+                <div class="row mb-100">
+                    <div class="col-12 col-lg-6 mx-auto text-center reveal">
+                        <h3 style="margin-top: 50px" class="mb-20">For Flyte Restaurants</h3>
+                        <p class="mb-40">Joining our Restaurant Program provides an amazing opportunity for your food to be experienced by hundreds of students on a daily basis. Guranteed, your order volume will increase and driven interest.</p>
+                        <a href="contact.html" class="btn btn--bg-primary btn-3d-hover btn-splash-hover"><span class="btn__text">Join our Restaurant Program</span></a>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row">
+                    <div class="col-12 col-lg-10 mx-auto text-center reveal">
+                        <picture>
+                            <img style="border-radius: 2%" src="img/Surface Pro 3 - 1.png" alt="dashboard-image">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =========== End of CTA Content Block ============ -->
+
+        
+
+       
+
+        <!-- =========== Start of CTA ============ -->
+        <section class="bg-color-primary space" style="margin-top: 50px">
+            <div class="background-holder background-holder--contain" >
+                <img src="img/cta-bg.png" alt="pattern" class="background-image-holder">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 text-center mx-auto reveal">
+                        <h3 class="mb-20">Download Flyte for Free!</h3>
+                        <p class="lead mb-50">Join students around Canada, who are making Flyte their best lunch ever.</p>
+                        <a href="https://apps.apple.com/ca/app/flyte-food-delivery/id1498481027" class="btn btn--bg-white btn--color-primary btn-3d-hover btn-splash-hover">
+                            <span class="btn__text">Get started</span>
+                        </a>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of CTA ============ -->
+
+        <!-- =========== Start of footer height emulator============ -->
+        <!-- this height emulator helps to calculate the fixed footer height  -->
+        <div class="height-emulator d-none d-lg-block"></div>
+        <!-- =========== End of footer height emulator============ -->
+
+         <!-- =========== Start of Footer ============ -->
+         <footer class="footer position-relative">
+            <div class="space border-bottom-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 col-lg-3 mb-20 mb-lg-0">
+                            <span class="mb-20">
+                                <a href="#"><img src="img/logo-icon-color.png" alt="logo"></a>
+                            </span>
+                            <p>CloudMates is an amazing student tailored platform for all highschool students. We believe in the leaders of our future. Get CloudMates for your school today.</p>
+                            <ul class="social-lists d-flex mb-0 mt-30">
+                                    <li><a href="https://www.instagram.com/cloudmates/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://twitter.com/cloudmatesCA"><i class="fa fa-twitter"></i></a></li>
+                                    
+                                </ul>
+                            <!-- end of social list -->
+
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                            <div class="footer-widget">
+                                <h6 class="mb-20">Company</h6>
+                                <ul>
+                                    <li><a href="aboutus.html">About Us</a></li>
+                                    <li><a href="team.html">Our Team</a></li>
+                                    <li><a href="campaign.html">Blog</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <!-- <li><a href="#">Press</a></li> -->
+                                    <!-- <li><a href="#">Brand Guidelines</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                            <div class="footer-widget">
+                                <h6 class="mb-20">Product</h6>
+                                <ul>
+                                    <li><a href="aboutus.html">Why CloudMates?</a></li>
+                                    <!-- <li><a href="#">Enterprise</a></li> -->
+                                    <li><a href="#reviews">Customer Stories</a></li>
+                                    <li><a href="#pricing">Pricing</a></li>
+                                    <li><a href="privacy.html">Security</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                            <div class="footer-widget">
+                                <h6 class="mb-20">Address</h6>
+                                <p class="">1800 Bay Street, <br> Toronto, M5H 2S6, <br> ON, Canada.</p>
+
+                                <div class="mt-30 d-flex align-items-start flex-column flex-md-row">
+                                    
+                                    <span class="color-primary mr-20 mt-10 mb-10 mb-md-0"><i class="icon icon-email"></i></span>
+
+                                    <div>
+                                        <h6>Send us an email</h6>
+                                        <a href="mailto:info@cloudmates.ca">
+                                            <p>info@cloudmates.ca</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of container -->
+            </div>
+            <!-- end of main footer -->
+            <div class="bg-color-grey py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-md-flex justify-content-between align-items-center">
+                            <nav class="nav">
+                                <ul class="d-flex mb-md-0">
+                                    <li><a href="status.html">Status</a></li>
+                                    <li><a href="privacy.html">Privacy & Terms</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                            <!-- end of mini footer nav -->
+                            <div class="d-flex justify-content-between ml-auto">
+                                <div class="lang-selector mr-30 position-relative">
+                                    <button class="lang-selector__button" type="button">
+                                        <img src="img/flag-usa.png" alt="United States" class="flag-image">
+                                        <span>English</span>
+                                        <i class="fa fa-angle-up"></i>
+                                    </button>
+                                    <!-- end of language selector button -->
+
+                                    <ul class="lang-dropdown mb-0">
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-usa.png"
+                                                    alt="United States" class="flag-image mr-10">English</a>
+                                        </li>
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-spain.png"
+                                                    alt="United States" class="flag-image mr-10">Spanish</a>
+                                        </li>
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-france.png"
+                                                    alt="United States" class="flag-image mr-10">France</a>
+                                        </li>
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-bangladesh.png"
+                                                    alt="United States" class="flag-image mr-10">Bengali</a>
+                                        </li>
+                                    </ul>
+                                    <!-- end of language selector dropdown-->
+                                </div>
+                                <!-- end of language selector -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of container -->
+            </div>
+            <!-- mini footer end -->
+        </footer>
+        <!-- =========== End of Footer ============ -->
+    </div>
+    <!-- =========== End of Main (Body) ============ -->
+
+    <script src="js/plugins.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

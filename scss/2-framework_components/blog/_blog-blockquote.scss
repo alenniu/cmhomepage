@@ -1,0 +1,21 @@
+.blog-main {
+    blockquote {
+        font-size: rem(20);
+        line-height: 1.7;
+        font-style: italic;
+        max-width: rem(500);
+        color: $color-on-light-primary;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: rem(30);
+        margin-top: rem(30);
+
+        span {
+            font-size: rem(16);
+            color: $color-on-light-secondary;
+            font-style: normal;
+            margin-top: rem(10);
+
+        }
+    }
+}

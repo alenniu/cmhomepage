@@ -1,0 +1,112 @@
+// DESCRIPTION:
+// 
+// An easy way to create 'card' like content
+// that appears inside a padded box.
+//
+//
+// MARKUP:
+//
+// <div class="card">
+//   ...
+// </div>
+//
+// MODIFIERS:
+// 
+// card--focused - for example please check pricing table card that is with primary bg color.
+// card--outline - border all around the card
+
+.card {
+	box-shadow: 0 2px 4px 0 rgba(44, 46, 48, 0.08);
+
+	.border-bottom-light {
+		#{$theme-dark} & {
+			border-bottom: 1px solid $very-light-blue;
+		}
+	}
+
+	&-footer {
+		background: $color-white;
+		border-color: $very-light-blue;
+	}
+
+	.avatar {
+		max-width: rem(36);
+
+		img {
+			border-radius: 100px;
+		}
+	}
+
+	.blockquote {
+		p {
+			color: $color-on-light-secondary-2;
+		}
+	}
+}
+
+/**! ----- Card Focused (for example see pricing area) ---- **/
+.card--focused {
+	@extend %bg-color-primary;
+
+	* {
+		color: $color-white;
+
+		#{$theme-dark} & {
+			color: $color-white;
+		}
+
+	}
+
+	.border-bottom-light {
+		border-color: rgba(0, 0, 0, 0.15);
+
+		#{$theme-dark} & {
+			border-color: rgba(0, 0, 0, 0.15);
+		}
+	}
+
+	.btn {
+		background: $color-white !important;
+
+		&__text {
+			@extend %color-primary;
+		}
+	}
+
+	p {
+		color: $very-light-blue;
+	}
+
+	.icon-rounded {
+		background: rgba($color-white, .2);
+
+		.icon {
+			color: $color-white !important;
+		}
+	}
+}
+
+/**! ----- Card outline (for example see xPider 2.0 - Cairo hero area) ---- **/
+.card--outline {
+	background: transparent;
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+
+	span {
+		border-bottom: 2px solid rgba(255, 255, 255, 0.14);
+	}
+
+	i {
+		font-size: rem(55);
+	}
+
+	&:hover,
+	&:focus {
+		@extend %bg-color-primary;
+		box-shadow: none;
+
+	}
+}
+
+.card__value--focused {
+	display: none;
+}

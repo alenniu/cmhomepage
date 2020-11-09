@@ -1,0 +1,47 @@
+// DESCRIPTION:
+// Add the pattern class name to the <body> element. example "swirl-pattern" .
+
+body.boxed-layout {
+    &.swirl-pattern {
+        background-image: url(..//img/patterns/swirl-pattern.png)
+    }
+    &.circle-pattern {
+        background-image: url(..//img/patterns/circle-pattern.png)
+    }
+    &.x-pattern {
+        background-image: url(..//img/patterns/x-pattern.png)
+    }
+    &.leaf-pattern {
+        background-image: url(..//img/patterns/leaf-pattern.png)
+    }
+    &.tic-tac-toe {
+        background-image: url(..//img/patterns/tic-tac-toe.png)
+    }
+    &.circles-light {
+        background-image: url(..//img/patterns/circles-light.png)
+    }
+    &.spiration-light {
+        background-image: url(..//img/patterns/spiration-light.png)
+    }
+    &.round-pattern {
+        background-image: url(..//img/patterns/round-pattern.png)
+    }
+    &.dark-angles {
+        background-image: url(..//img/patterns/dark-angles.png)
+    }
+    &.memphis-colorful{
+        background-image: url(..//img/patterns/memphis-colorful.png)
+    }
+    &.spiration-dark {
+        background-image: url(..//img/patterns/spiration-dark.png)
+    }
+    &.curls {
+        background-image: url(..//img/patterns/curls.png)
+    }
+    &.darkness {
+        background-image: url(..//img/patterns/darkness.png)
+    }
+    &.zig-zag-wool {
+        background-image: url(..//img/patterns/zig-zag-wool.png)
+    }
+}

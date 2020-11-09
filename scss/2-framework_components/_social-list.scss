@@ -1,0 +1,31 @@
+// MARKUP:
+// 
+// <ul class="social-lists d-flex">
+//     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+//     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+//     <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+// </ul>
+
+.social-lists {
+    li {
+        a {
+            font-size: rem(14);
+            height: rem(30);
+            width: rem(30);
+            line-height: rem(30);
+            border-radius: 100px;
+            background: $slate;
+            color: $color-white;
+            text-align: center;
+            transition: .3s;
+            &:hover{
+                @extend %bg-color-primary;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-#{$right}: rem(10);
+        }
+    }
+
+}

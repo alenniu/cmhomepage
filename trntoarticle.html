@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>CloudMates</title>
+                <!-- favicon CSS -->
+                <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+                <!-- google fonts -->
+                <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+                <!-- custom fonts -->
+                <link href="fonts/aileron.css" rel="stylesheet">
+                <!-- Plugins CSS -->
+                <link rel="stylesheet" href="css/plugins.min.css">
+                <!-- Style CSS -->
+                <link rel="stylesheet" href="css/app.css">
+                <!-- Your CSS -->
+                <link rel="stylesheet" href="css/custom.css">
+            </head>
+            
+            
+            <body class="gradient-1" data-spy="scroll" data-target="#navbar-nav" onload="myFunction()">
+            
+               
+                <!-- =========== Preloader Start ============ -->
+                <div class="preloader-main">
+                    <div class="preloader-wapper">
+                        <svg class="preloader" xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="200">
+                            <defs>
+                                <filter id="goo" x="-40%" y="-40%" height="200%" width="400%">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -8" result="goo" />
+                                </filter>
+                            </defs>
+                            <g filter="url(#goo)">
+                                <circle class="dot bg-fill-primary " cx="50" cy="50" r="25" />
+                                <circle class="dot" cx="50" cy="50" r="25" fill="#4c83ff" />
+                            </g>
+                        </svg>
+                        <div>
+                            <div class="loader-section section-left"></div>
+                            <div class="loader-section section-right"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- =========== Preloader End ============ -->
+                
+                <div class="main">
+                   <!-- =========== Start of Navigation (main menu) ============ -->
+        <header class="navbar navbar-sticky navbar-expand-lg navbar-dark">
+                <div class="container position-relative">
+                    <a class="navbar-brand mr-70" href="index.html">
+                        <img class="navbar-brand__regular" src="img/ayyy.png" alt="brand-logo">
+                        <img class="navbar-brand__sticky" src="img/ayyy.png" alt="sticky brand-logo">
+                    </a>
+                    <!--  End of brand logo -->
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- end of Nav toggler -->
+    
+                    <div class="navbar-inner">
+                        <!--  Nav close button inside off-canvas/ mobile menu -->
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- end of Nav Toggoler -->
+                        <nav>
+                            <ul class="navbar-nav" id="navbar-nav">
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="#tabsop">Features</a>
+                                </li> -->
+                                
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <b>  Pages</b>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <!-- <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Classic</a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-sidebar-right.html">Sidebar Right</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-sidebar-Left.html">Sidebar Left</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-grid-2-col-sidebar-right.html">2 Columns Sidebar Right</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-grid-2-col-sidebar-left.html">2 Columns Sidebar Left</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-full.html">Full Width</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Card</a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-card-2-col.html">Card 2 Columns</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-card-3-col.html">Card 3 Columns</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-card-full.html">Card Full Width</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog List</a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-list-sidebar-right.html">List Sidebar Rigt</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-list-sidebar-left.html">List Sidebar Left</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-list-full.html">List Full Width</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog
+                                                Details</a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-details-sidebar-right.html">Blog Details Sidebar Right</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-details-sidebar-left.html">Blog Details Sidebar Left</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="blog-details-full.html">Blog Details Full</a>
+                                                </li>
+                                            </ul>
+                                        </li> -->
+                                       
+                                            
+                                                
+                                                <li>
+                                                    <a class="dropdown-item" href="logintoschool.html">Available Schools</a>
+                                                </li>
+                                                <li>
+                                                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                                                    </li>
+                                        
+                                        <!-- <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Specialty Pages</a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="coming-soon.html">Comming Soon</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="download.html">Download</a>
+                                                </li> 
+                                                <li>
+                                                    <a class="dropdown-item" href="subscribe-confirmation.html">Subscribe Confirmation</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="maintenance.html">Maintenance</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="error-404.html">Error 404</a>
+                                                </li>
+                                            </ul>
+                                        </li> -->
+                                       
+                                        
+                                        <li>
+                                            <a class="dropdown-item" href="faq.html">FAQ</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="contact.html">Contact</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="team.html">Team</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- end of nav menu items -->
+                        </nav>
+                    </div>
+                    <div class="flex-row ml-lg-auto d-md-flex mr-60 mr-lg-0 d-none d-sm-inline-block">
+                        <a href="campaign.html" style="background-color:rgba(230, 196, 101, 0.68)" class="btn rounded-full btn--outline btn--md btn-3d-hover btn-splash-hover ">
+                            <span class="btn__text">COVID-19 CAMPAIGN</span> 
+                        </a>
+                    </div>
+                    <div class="flex-row ml-lg-auto d-md-flex mr-60 mr-lg-0 d-none d-sm-inline-block">
+                        <a href="flyte.html" style="background-color:rgba(101, 183, 230, 0.721)" class="btn rounded-full btn--outline btn--md btn-3d-hover btn-splash-hover ">
+                            <span class="btn__text">Flyte Delivery</span> 
+                        </a>
+                    </div>
+                    <div class="flex-row ml-lg-auto d-md-flex mr-60 mr-lg-0 d-none d-sm-inline-block">
+                            <a href="tutoring.html" style="background-color:rgba(230, 101, 198, 0.721)" class="btn rounded-full btn--outline btn--md btn-3d-hover btn-splash-hover ">
+                                <span class="btn__text">Tutoring</span> 
+                            </a>
+                        </div>
+    
+                    <!-- <div  class="flex-row ml-lg-auto d-md-flex mr-70 mr-lg-0 d-none d-sm-inline-block">
+                        <a href="logintoschool.html" class="btn rounded-full btn--outline btn--sm btn-3d-hover btn-splash-hover ">
+                            <span class="btn__text">Login</span> 
+                        </a>
+                    </div> -->
+                    <!-- end of nav cta button -->
+                </div>
+                <!-- end of container -->
+            </header>
+            <!-- =========== End of Navigation (main menu)  ============ -->
+
+        <!-- =========== Start of Blog Body ============ -->
+        <section class="space-bottom space-top--lg blog-main blog-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8 mb-60 mb-lg-0">
+                        <div class="content">
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <img src="img/alenniu.jpg" alt="Image" class="rounded">
+                                    
+                                </div>
+                            </div>
+                            <!-- end of image row -->
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <h1 class="h4-font mb-20">Toronto high school student raises $8,000 and buys medical equipment from China for local hospital</h1>
+                                    <div class="d-flex mb-10">
+                                        <small class="mr-20">Article </small>
+                                        <small>by <a class="color-light-secondary font-w-700 btn-text-hover transition-default" href="toronto.com">David Olsen for TRNTO</a></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of title row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <p>A 16-year-old Toronto student has fundraised and donated close to $8,000 worth of medical equipment to North York General Hospital after recognizing the need for healthcare workers to have personal protective equipment.
+
+                                        Alen Niu, who is in Grade 11 at Upper Canada College, volunteered at the hospital gift shop prior to the COVID-19 pandemic.
+                                        
+                                      </p>
+                                      <p>Niu took initiative after seeing the impact that COVID-19 was having on hospitals and seeing how healthcare workers were risking their lives while being away from their families in order to help others. He noticed that workers were running low on masks and gloves via his discussions with various healthcare workers when they would stop by the gift shop on breaks.
+
+                                        Niu started to send emails to hospitals and manufacturers and received a reply from a hospital in the Beijing area that had an excess of masks, gowns, and gloves due to the decrease of COVID-19 in the area.</p>
+                                      <p>The hospital said they would sell the items to him, which was the impetus for his fundraising efforts.
+
+                                        The current pandemic has killed over 300,000 people worldwide and shuttered much of the world’s economy. There have thus far been over 80,000 confirmed cases of COVID-19 in Canada, with more than 6,000 deaths. Ontario has more than 24,000 confirmed cases and a death count approaching 2,000.
+                                        
+                                        “I want the community to be aware of what doctors, nurses, and healthcare workers have to go through on a daily basis during this time, and that there are ways to support them,” said Niu.
+                                        
+                                        “I was amazed to hear the amount of money and supplies donated, but I wasn’t surprised when I heard it was Alen,” said Sheri Loosemore, North York General’s manager of volunteer services. “He is always putting his best foot forward, and striving to be the best he can be.”</p>
+                                        <p>Niu has since gone a step further with his fundraising and has now started an online fundraising campaign to continue buying supplies for all hospitals in need across Canada.
+
+                                            “As a Canadian, I cannot stand idle,” said Niu. “Although this was a great first run since the spread of this pandemic hasn’t stopped yet, I won’t stop helping our community and healthcare workers.”
+                                            
+                                            Anyone wishing to make a donation can do so at Niu’s GoFundMe site.</p>
+                                            <h5>Source:</h5>
+                                         <a href="https://trnto.com/toronto-student-donates-medical-equipment/"> https://trnto.com/toronto-student-donates-medical-equipment/</a>  
+
+                                    <h5>Thank You Everyone for Supporting this Cause </h5>
+
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of post details -->
+                        
+                       
+                                      
+                                        <hr>
+                                    
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-4 pl-xl-5">
+                            <div class="widget">
+                                    <div class="gfm-embed" data-url="https://www.gofundme.com/f/covid19-canada-relief-campaign/widget/large"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+                                    <hr class="my-5 hr--blod">
+    
+                                  
+                                    <div class="widget">
+                                        <h3 class="h5-font mb-30 color-primary">Highest Donations</h3>
+                                        <div class="d-flex flex-column">
+                                            <small>Thank You</small> <a href="#"><p class="color-light-primary font-w-600 btn-text-hover transition-default"><b>Zhanyuan Bai</b> for donating <b>100$</b> </p></a>
+                                        </div>
+                                        <hr>
+                                        <div class="d-flex flex-column">
+                                                <small>Thank You</small> <a href="#"><p class="color-light-primary font-w-600 btn-text-hover transition-default"><b>Anonymous</b> for donating <b>50$</b> </p></a>
+                                            </div>
+                                        <hr>
+                                        <div class="d-flex flex-column">
+                                                <small>Thank You</small> <a href="#"><p class="color-light-primary font-w-600 btn-text-hover transition-default"><b>Joe Z</b> for donating <b>20$</b> </p></a>
+                                            </div>
+                                        <hr>
+                                        <div class="d-flex flex-column">
+                                                <small>Thank You</small> <a href="#"><p class="color-light-primary font-w-600 btn-text-hover transition-default"><b>Olivia B</b> for donating <b>20$</b> </p></a>
+                                            </div>
+                                    </div>    
+    
+                                    <hr class="my-5 hr--blod">
+                                <h3 class="h5-font mb-30 color-primary">Latest News</h3>
+                                <article class="article d-flex align-items-center mb-3">
+                                    <span class="article__thumbnail mr-20">
+                                        <img class="rounded-default" src="img/rsz_image.png" alt="blog-image">
+                                    </span>
+                                    <a class="mb-10" href="https://www.ctvnews.ca/health/coronavirus/tracking-every-case-of-covid-19-in-canada-1.4852102"><p class="color-light-primary font-w-600 btn-text-hover transition-default">Canada Cases Rise to 1470</p></a>
+                                </article>
+                                <article class="article d-flex align-items-center mb-3">
+                                    <span class="article__thumbnail mr-20">
+                                        <img class="rounded-default" src="img/rsz_cflag.png" alt="blog-image">
+                                    </span>
+                                    <a class="mb-10" href="https://globalnews.ca/news/6715135/coronavirus-social-distancing-punishments-canada/"><p class="color-light-primary font-w-600 btn-text-hover transition-default">Canada will use every method in our Toolbox to prevent the spread of Covid-19</p></a>
+                                </article>
+                                <article class="article d-flex align-items-center mb-3">
+                                    <span class="article__thumbnail mr-20">
+                                        <img class="rounded-default" src="img/rsz2.jpg" alt="blog-image">
+                                    </span>
+                                    <a class="mb-10" href="https://www.ctvnews.ca/health/coronavirus/canada-not-sending-athletes-to-tokyo-olympics-unless-games-postponed-1.4863816"><p class="color-light-primary font-w-600 btn-text-hover transition-default">Canada refuses to go to the 2020 Tokyo Olympic Games</p></a>
+                                </article>
+                            </div>
+                            <!-- end of recent Post -->
+                            
+                           
+                            <!-- end of recent comment -->
+                        </div>
+                        <!-- end of sidebar col -->
+                </div>
+            </div>
+        </section>
+        <!-- =========== End of Blog Body ============ -->
+        <hr>
+       
+
+        <!-- =========== Start of CTA ============ -->
+        <section class="bg-color-primary space">
+                <div class="background-holder background-holder--contain">
+                    <img src="img/cta-bg.png" alt="pattern" class="background-image-holder">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 text-center mx-auto reveal">
+                            <h3 class="mb-20">Share our Campaign!</h3>
+                            <p class="lead mb-50">Help Save Millions of People around the World.</p>
+                            <a href="https://www.gofundme.com/f/covid19-canada-relief-campaign" class="btn btn--bg-white btn--color-primary btn-3d-hover btn-splash-hover">
+                                <span class="btn__text">Share</span>
+                            </a>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of container -->
+            </section>
+            <!-- =========== End of CTA ============ -->  
+
+        <!-- =========== Start of footer height emulator============ -->
+        <!-- this height emulator helps to calculate the fixed footer height  -->
+        <div class="height-emulator d-none d-lg-block"></div>
+        <!-- =========== End of footer height emulator============ -->
+
+ <!-- =========== Start of Footer ============ -->
+ <footer class="footer position-relative">
+        <div class="space border-bottom-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-4 col-lg-3 mb-20 mb-lg-0">
+                        <span class="mb-20">
+                            <a href="#"><img src="img/logo-icon-color.png" alt="logo"></a>
+                        </span>
+                        <p>CloudMates is an amazing student tailored platform for all highschool students. We believe in the leaders of our future. Get CloudMates for your school today.</p>
+                        <ul class="social-lists d-flex mb-0 mt-30">
+                                <li><a href="https://www.instagram.com/cloudmates/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://twitter.com/cloudmatesCA"><i class="fa fa-twitter"></i></a></li>
+                                
+                            </ul>
+                        <!-- end of social list -->
+
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                        <div class="footer-widget">
+                            <h6 class="mb-20">Company</h6>
+                            <ul>
+                                <li><a href="aboutus.html">About Us</a></li>
+                                <li><a href="team.html">Our Team</a></li>
+                                <li><a href="campaign.html">Blog</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <!-- <li><a href="#">Press</a></li> -->
+                                <!-- <li><a href="#">Brand Guidelines</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                        <div class="footer-widget">
+                            <h6 class="mb-20">Product</h6>
+                            <ul>
+                                <li><a href="aboutus.html">Why CloudMates?</a></li>
+                                <!-- <li><a href="#">Enterprise</a></li> -->
+                                <li><a href="#reviews">Customer Stories</a></li>
+                                <li><a href="#pricing">Pricing</a></li>
+                                <li><a href="privacy.html">Security</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                        <div class="footer-widget">
+                            <h6 class="mb-20">Address</h6>
+                            <p class="">1800 Bay Street, <br> Toronto, M5H 2S6, <br> ON, Canada.</p>
+
+                            <div class="mt-30 d-flex align-items-start flex-column flex-md-row">
+                                
+                                <span class="color-primary mr-20 mt-10 mb-10 mb-md-0"><i class="icon icon-email"></i></span>
+
+                                <div>
+                                    <h6>Send us an email</h6>
+                                    <a href="mailto:info@cloudmates.ca">
+                                        <p>info@cloudmates.ca</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </div>
+        <!-- end of main footer -->
+        <div class="bg-color-grey py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-md-flex justify-content-between align-items-center">
+                        <nav class="nav">
+                            <ul class="d-flex mb-md-0">
+                                <li><a href="status.html">Status</a></li>
+                                <li><a href="privacy.html">Privacy & Terms</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <!-- end of mini footer nav -->
+                        <div class="d-flex justify-content-between ml-auto">
+                            <div class="lang-selector mr-30 position-relative">
+                                <button class="lang-selector__button" type="button">
+                                    <img src="img/flag-usa.png" alt="United States" class="flag-image">
+                                    <span>English</span>
+                                    <i class="fa fa-angle-up"></i>
+                                </button>
+                                <!-- end of language selector button -->
+
+                                <ul class="lang-dropdown mb-0">
+                                    <li>
+                                        <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-usa.png"
+                                                alt="United States" class="flag-image mr-10">English</a>
+                                    </li>
+                                    <li>
+                                        <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-spain.png"
+                                                alt="United States" class="flag-image mr-10">Spanish</a>
+                                    </li>
+                                    <li>
+                                        <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-france.png"
+                                                alt="United States" class="flag-image mr-10">France</a>
+                                    </li>
+                                    <li>
+                                        <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-bangladesh.png"
+                                                alt="United States" class="flag-image mr-10">Bengali</a>
+                                    </li>
+                                </ul>
+                                <!-- end of language selector dropdown-->
+                            </div>
+                            <!-- end of language selector -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of container -->
+        </div>
+        <!-- mini footer end -->
+    </footer>
+    <!-- =========== End of Footer ============ -->
+    
+
+    </div>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

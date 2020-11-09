@@ -1,0 +1,54 @@
+.working-process {
+    .working-process-block {
+        &:hover {
+            .icon-dotted {
+                &:after {
+                    animation: infinite-spinning 5s infinite linear;
+                }
+            }
+        }
+    }
+
+    div[class*='col-'] {
+        &:not(:last-child) {
+            .working-process-block {
+                @include media(md) {
+
+                    &:after {
+                        content: "\ea1a";
+                        font-family: 'xPider';
+                        color: #e2e6ea;
+                        font-size: rem(92);
+                        @include pos-abs(0, -12%, auto, auto);
+                        text-shadow: -3px 0px 0px #fff;
+                        transition: .3s;
+
+                        #{$theme-dark} & {
+                            text-shadow: -3px 0px 0px $midnight;
+                        }
+                        @include rtl{
+                            content: "\ea19";
+                        }
+                    }
+                }
+
+                @include mediaMax(md) {
+                    margin-bottom: rem(40);
+                }
+
+                &:hover {
+                    &:after {
+                        #{$right}: -17%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    p {
+        max-width: rem(275);
+        margin: 0 auto;
+    }
+}
+

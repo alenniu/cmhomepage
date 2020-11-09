@@ -1,0 +1,395 @@
+// DESCRIPTION:
+// These are the theme colors that we have used in the demo color switcher controller.
+
+//// Using method of the demo colors:
+// Add any of the "theme-" class to the <body> element. example "theme-green"
+
+// Remamber the core colors code are declared in the variables file. 
+// You can delete theme If you don't want to use any of our given colors. And if you want to use your own color then just open the variable file and change the variable color of "$color-primary" !! SIMPLE!!! Isn't?!
+
+/**! ----- bg colors for theme ---- **/
+%bg-color-primary {
+	.theme-green & {
+		background: $theme-green;
+	}
+
+	.theme-violet & {
+		background: $theme-violet;
+	}
+
+	.theme-firoza & {
+		background: $theme-firoza;
+	}
+
+	.theme-red & {
+		background: $theme-red;
+	}
+
+	.theme-orange & {
+		background: $theme-orange;
+	}
+
+
+	/////////////////////// Gradient bg
+	.gradient-1 & {
+		background: $gradient-1;
+	}
+
+	.gradient-2 & {
+		background: $gradient-2;
+	}
+
+	.gradient-3 & {
+		background: $gradient-3;
+	}
+
+	.gradient-4 & {
+		background: $gradient-4;
+	}
+
+	.gradient-5 & {
+		background: $gradient-5;
+	}
+
+	.gradient-6 & {
+		background: $gradient-6;
+	}
+}
+
+// button bg color mixup with Gradient theme
+.slick-active .slick-dots--long,
+.btn--bg-primary,
+.navbar .btn--outline:hover,
+.btn--bg-grey:hover {
+	.gradient-1 & {
+		background: $color-blue-2;
+
+	}
+
+	.gradient-2 & {
+		background: $color-primary;
+
+	}
+
+	.gradient-3 & {
+		background: $color-indigo;
+	}
+
+	.gradient-4 & {
+		background: $cadillac;
+	}
+
+	.gradient-5 & {
+		background: $paradiso;
+	}
+
+	.gradient-6 & {
+		background: $theme-violet;
+	}
+
+}
+
+
+/////////////////////// Gradient bg override when there is class
+
+[class*="bg-gradient"] {
+	.theme-primary & {
+		background: $color-primary;
+	}
+
+	.theme-green & {
+		background: $theme-green;
+	}
+
+	.theme-violet & {
+		background: $theme-violet;
+	}
+
+	.theme-firoza & {
+		background: $theme-firoza;
+	}
+
+	.theme-red & {
+		background: $theme-red;
+	}
+
+	.theme-orange & {
+		background: $theme-orange;
+	}
+
+	/////////////////////// Gradient bg
+	.gradient-1 & {
+		background: $gradient-1;
+	}
+
+	.gradient-2 & {
+		background: $gradient-2;
+	}
+
+	.gradient-3 & {
+		background: $gradient-3;
+	}
+
+	.gradient-4 & {
+		background: $gradient-4;
+	}
+
+	.gradient-5 & {
+		background: $gradient-5;
+	}
+
+	.gradient-6 & {
+		background: $gradient-6;
+
+	}
+}
+
+/**! ----- svg fill color ---- **/
+%fill-primary {
+	.theme-primary & {
+		fill: $color-primary;
+	}
+
+	.theme-green & {
+		fill: $theme-green;
+	}
+
+	.theme-violet & {
+		fill: $theme-violet;
+	}
+
+	.theme-firoza & {
+		fill: $theme-firoza;
+	}
+
+	.theme-red & {
+		fill: $theme-red;
+	}
+
+	.theme-orange & {
+		fill: $theme-orange;
+	}
+
+	/////////////////////// fill mixup with Gradient theme
+	.gradient-1 & {
+		fill: $color-blue-2;
+	}
+
+	.gradient-2 & {
+		fill: $color-primary;
+	}
+
+	.gradient-3 & {
+		fill: $color-indigo;
+	}
+
+	.gradient-4 & {
+		fill: $cadillac;
+	}
+
+	.gradient-5 & {
+		fill: $paradiso;
+	}
+
+	.gradient-6 & {
+		fill: $theme-violet;
+	}
+
+}
+
+/**! ----- colors for theme ---- **/
+%color-primary,
+.btn--outline.btn--color-primary,
+.btn--outline-thick.btn--color-primary,
+.btn--color-dark.btn-text-hover:hover {
+	.theme-green & {
+		color: $theme-green;
+		// #{$theme-dark} & {
+		// 	color: $theme-green;
+
+		// }
+	}
+
+	.theme-violet & {
+		color: $theme-violet;
+	}
+
+	.theme-firoza & {
+		color: $theme-firoza;
+	}
+
+	.theme-red & {
+		color: $theme-red;
+	}
+
+	.theme-orange & {
+		color: $theme-orange;
+	}
+
+	/////////////////////// Color mixup with Gradient theme
+	.gradient-1 & {
+		color: $color-blue-2;
+	}
+
+	.gradient-2 & {
+		color: $color-primary;
+	}
+
+	.gradient-3 & {
+		color: $color-indigo;
+	}
+
+	.gradient-4 & {
+		color: $cadillac;
+	}
+
+	.gradient-5 & {
+		color: $paradiso;
+	}
+
+	.gradient-6 & {
+		color: $theme-violet;
+	}
+
+}
+
+/**! ----- Border Color for theme ---- **/
+.border-primary,
+.btn--color-dark.btn-text-hover:hover {
+	.theme-green & {
+		border-color: $theme-green;
+	}
+
+	.theme-violet & {
+		border-color: $theme-violet;
+	}
+
+	.theme-firoza & {
+		border-color: $theme-firoza;
+	}
+
+	.theme-red & {
+		border-color: $theme-red;
+	}
+
+	.theme-orange & {
+		border-color: $theme-orange;
+	}
+
+	/////////////////////// border color mixup with Gradient theme
+
+	.gradient-1 & {
+		border-color: $color-blue-2;
+	}
+
+	.gradient-2 & {
+		border-color: $color-primary;
+	}
+
+	.gradient-3 & {
+		border-color: $color-indigo;
+	}
+
+	.gradient-4 & {
+		border-color: $cadillac;
+	}
+
+	.gradient-5 & {
+		border-color: $paradiso;
+	}
+
+	.gradient-6 & {
+		border-color: $theme-violet;
+
+	}
+}
+
+/**! ----- Box shadow Color for theme  ---- **/
+%box-shadow-primary {
+	.theme-green & {
+		box-shadow: 0px 2px 0px $theme-green;
+	}
+
+	.theme-violet & {
+		box-shadow: 0px 2px 0px $theme-violet;
+
+	}
+
+	.theme-firoza & {
+		box-shadow: 0px 2px 0px $theme-firoza;
+
+	}
+
+	.theme-red & {
+		box-shadow: 0px 2px 0px $theme-red;
+	}
+
+	.theme-orange & {
+		box-shadow: 0px 2px 0px $theme-orange;
+
+	}
+
+	/////////////////////// box shadow mixup with Gradient theme
+	.gradient-1 & {
+		box-shadow: 0px 2px 0px $color-blue-2;
+	}
+
+	.gradient-2 & {
+		box-shadow: 0px 2px 0px $color-primary;
+	}
+
+	.gradient-3 & {
+		box-shadow: 0px 2px 0px $color-indigo;
+	}
+
+	.gradient-4 & {
+		box-shadow: 0px 2px 0px $cadillac;
+	}
+
+	.gradient-5 & {
+		box-shadow: 0px 2px 0px $paradiso;
+	}
+
+	.gradient-6 & {
+		box-shadow: 0px 2px 0px $theme-violet;
+
+	}
+
+}
+
+// additional theme adjustment styles
+
+body[class*="gradient-"] {
+	.card--focused {
+		border: none;
+	}
+
+	.navbar {
+		.btn--outline {
+			box-shadow: 0 0 1px 0 #fff;
+			border: none;
+
+			&:hover {
+				box-shadow: none;
+			}
+		}
+	}
+
+	.card {
+		.btn--outline {
+			box-shadow: 0 0 1px 0 #aaa;
+			border: none;
+		}
+	}
+}
+
+body[class*="gradient-"],
+body[class*="theme-"] {
+	.navbar-sticky--on .btn {
+		color: $color-white;
+	}
+
+	.form-subscription .btn {
+		border-left: 1px solid #e7eaee;
+	}
+}

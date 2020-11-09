@@ -1,0 +1,389 @@
+// MARKUP:
+//
+// <a class="btn" href="#">
+//   <span class="btn__text">Button Title</span>
+// </a>
+//
+// MODIFIERS:
+// 
+// btn--sm - smaller size button
+// btn--transparent - for the transparent button which also remove padding inside the button
+// btn--bg-primary - we have used the syntax primary as a theme default state. Such as our theme default color is blue which means btn--bg-primary = button background color is blue. The colors are fully updateable from the variable.scss file.
+
+// btn--bg-white - white background for button. will work with dark text color. such as: btn--color-dark
+// btn--bg-coral - coral background for button. will work with dark text color. such as: btn--color-dark
+// btn--color-primary - similar to btn--bg-primary but it will change the text/ icon color.
+// btn--color-dark - dark color for text/icon
+// btn--color-white  - white color for text/icon. will work with dark bg color. such as: btn--bg-primary
+// btn--color-grey - grey color for text/icon
+// btn--color-coral - coral color for text/icon
+// btn--outline - Border all around the button
+// btn--outline-thick - thicker border than "btn--outline" 
+// btn--underline - botder bottom
+// btn--arrow-after - arrow with the button. You can also create this style your own way using icon fonts. We create this way because the arrow icon we have used for button is not available in the icon font list
+
+// HOVER EFFECT CLASSES:
+// 
+// btn-3d-hover
+// btn-splash-hover
+// btn-border-hover
+// btn-text-hover
+
+// btn-no-focused - remove focused completely
+
+.btn {
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    font-size: rem(16);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: rem(16) rem(38);
+    transition: .3s;
+    position: relative;
+    z-index: 1;
+    @extend .rounded-default;
+}
+
+/**! ----- button size ---- **/
+.btn--sm {
+    padding: rem(13) rem(20);
+    font-size: rem(13);
+
+}
+
+/**! ----- button background color ---- **/
+
+.btn--transparent {
+    background: transparent;
+    padding: 0;
+    font-size: rem(17);
+    border-radius: 0;
+    text-transform: inherit;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn+.btn--transparent {
+    margin-#{$left}: rem(25);
+}
+
+.btn--bg-primary {
+    @extend %bg-color-primary;
+    color: $color-white;
+
+    &:hover {
+        color: $color-white;
+    }
+}
+
+.btn--bg-white {
+    background: $color-white;
+
+    &:hover {
+        @extend %color-primary;
+    }
+}
+
+.btn--bg-grey {
+    background: $pale-grey;
+
+    &:hover {
+        @extend %bg-color-primary;
+        color: $color-white !important;
+    }
+
+}
+
+.btn--bg-coral {
+    background: $coral;
+    color: $color-white;
+
+    &:hover {
+        color: $color-white !important;
+    }
+
+}
+
+.btn--bg-yellow {
+    background: $bright-yellow;
+    color: $color-on-light-primary;
+
+    &:hover {
+        color: $color-on-light-primary !important;
+    }
+
+}
+
+/**! ----- button text color ---- **/
+.btn--color-primary {
+    @extend %color-primary;
+    @extend .border-primary;
+
+    &:hover {
+        @extend %color-primary;
+    }
+
+    &.btn-text-hover {
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+}
+
+.btn--color-dark {
+    color: $color-on-light-primary;
+    border-color: $color-on-light-primary;
+
+    &.btn-text-hover {
+        &:hover {
+            @extend %color-primary;
+            @extend .border-primary;
+        }
+    }
+}
+
+.btn--color-white {
+    color: $color-white;
+    border-color: $color-white;
+}
+
+.btn--color-grey {
+    color: $color-on-light-secondary-2;
+    border-color: $color-on-light-secondary-2;
+}
+
+.btn--color-coral {
+    color: $coral;
+    border-color: $coral;
+}
+
+/**! ----- button outline (border all around the button) style ---- **/
+.btn--outline {
+    border: 1px solid $light-blue-grey;
+    @extend .color-light-secondary;
+
+    &.btn--color-primary {
+        @extend %color-primary;
+        // &:hover {
+        //     color: $color-white;
+        // }
+
+    }
+
+    &:hover {
+        @extend %bg-color-primary;
+        @extend .border-primary;
+        color: $color-white!important;
+    }
+}
+
+.btn--outline-thick {
+    border: 2px solid $light-blue-grey;
+    @extend .color-light-secondary;
+
+    &.btn--color-primary {
+        @extend %color-primary;
+
+        // &:hover {
+        //     color: $color-white;
+        // }
+    }
+
+    &:hover {
+        @extend %bg-color-primary;
+        @extend .border-primary;
+        color: $color-white!important;
+    }
+}
+
+/**! ----- button border (border bottom) style ---- **/
+.btn--underline {
+    padding: 0;
+    font-size: rem(17);
+    border-bottom: 1px solid;
+    border-radius: 0;
+    text-transform: inherit;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn+.btn--underline {
+    @include media(sm) {
+        margin-#{$left}: rem(25) !important;
+    }
+}
+
+/**! ----- button arrow style ---- **/
+.btn--arrow-after {
+    background: url(../img/tail-right.svg) no-repeat center right;
+
+    @include rtl {
+        background: url(../img/tail-left.svg) no-repeat center left;
+    }
+
+
+    &.btn--color-white {
+        background: url(../img/tail-right-light.svg) no-repeat center right;
+
+        @include rtl {
+            background: url(../img/tail-left-light.svg) no-repeat center left;
+        }
+
+
+    }
+}
+
+/**! ----- button badge (check pricing tab on home v2) ---- **/
+.btn {
+    .badge {
+        transform: translate(50%, -50%);
+
+        @include rtl {
+            transform: translate(-50%, -50%);
+
+        }
+    }
+}
+
+/**! ----- button group (when multiple button in a row) style reset---- **/
+.button-group {
+    display: flex;
+    align-items: center;
+
+    @include mediaMax(sm) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .btn {
+            margin: rem(6) 0;
+        }
+    }
+}
+
+.btn+.btn:last-child {
+
+    @include mediaMax(sm) {
+        margin-top: rem(10);
+    }
+
+    @include media(sm) {
+        margin-#{$left}: rem(10);
+
+    }
+
+    .pricing-tab & {
+        margin-top: 0;
+    }
+}
+
+/**! ----- button focus disable ---- **/
+.btn-no-focused {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+/**! ----- button hover style ---- **/
+
+.btn-3d-hover {
+
+    &:hover,
+    &:focus {
+        transform: translateY(-3px);
+        @extend .box-shadow-2;
+    }
+
+}
+
+.btn-splash-hover {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        @include pos-abs(-40px, auto, auto, -100px);
+        height: 220px;
+        width: 50px;
+        background: linear-gradient(to $right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+        z-index: -1;
+        opacity: .1;
+        transform: skew(-12deg, 0deg);
+        transition: .5s ease 0s;
+        visibility: hidden;
+
+        @include rtl {
+            transform: skew(12deg, 0deg);
+
+        }
+
+    }
+
+    &.btn--bg-white {
+        &:before {
+            background: linear-gradient(to $right, rgba($slate, 0) 0%, rgba($slate, 0.03) 1%, rgba($slate, 0.4) 30%, rgba($slate, 0.85) 50%, rgba($slate, 0.75) 70%, rgba($slate, 0.75) 71%, rgba($slate, 0) 100%);
+
+        }
+    }
+
+    &:hover {
+        &:before {
+            #{$left}: 100%;
+            visibility: visible;
+            transition: .5s ease .2s;
+
+        }
+
+    }
+}
+
+.btn-border-hover {
+    position: relative;
+
+    &:before {
+        @include pos-abs(auto, auto, -2px, 0px);
+        content: "";
+        height: 2px;
+        width: 0;
+        background: $color-on-light-primary;
+        transition: .3s;
+    }
+
+    &.btn--color-white {
+        &:before {
+            @extend %bg-color-primary;
+        }
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    &:hover {
+        color: $color-on-light-primary;
+
+        &:before {
+            width: 100%;
+        }
+    }
+}
+
+.btn-text-hover {
+    &:hover {
+        @extend %color-primary;
+        @extend .border-primary;
+
+    }
+
+    &.btn--color-white {
+        &:hover {
+            color: darken($color-white, $amount: 15)!important;
+            border-color: darken($color-white, $amount: 20)!important;
+        }
+    }
+}

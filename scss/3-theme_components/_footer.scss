@@ -1,0 +1,60 @@
+.footer {
+    position: relative;
+    @include media(lg){
+        &--fixed{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: -1;
+        }
+    
+    }
+
+    &-widget {
+        ul {
+            li {
+                a {
+                    color: $color-on-light-secondary;
+                    transition: .3s;
+                    #{$theme-dark} &{
+                        color: $color-on-light-secondary-2;
+                    }    
+                    &:hover{
+                        @extend %color-primary;
+                    }
+    
+                }
+                &:not(:last-child) {
+                    margin-bottom: rem(15);
+                }
+            }
+        }
+        .icon-email{
+            font-size: rem(45);
+        }
+    }
+
+    .nav {
+        li{
+            a {
+                font-size: $font-size-14;
+                color: $color-on-light-secondary;
+                font-weight: bold;
+                transition: .3s;
+                #{$theme-dark} &{
+                    color: $color-on-light-secondary-2;
+                }
+
+                &:hover{
+                    @extend %color-primary;
+                }
+            }
+            &:not(:last-child) {
+                margin-#{$right}: rem(30);
+            }
+    
+        }
+    }
+}
+

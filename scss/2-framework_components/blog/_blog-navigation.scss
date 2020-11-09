@@ -1,0 +1,21 @@
+.blog-main{
+    .navigations{
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding-top: rem(30);
+            padding-bottom: rem(30);
+        }
+        li{
+            display: flex;
+            flex-direction: column;
+            max-width: 50%;
+        }
+        span{
+            margin-bottom: rem(10);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+
+// base font settings
+// =============================================================
+$base-unit:                                                                 16;
+$base-line-height:                                                          1rem;
+
+// fonts family
+// =============================================================
+
+$font-primary:                                                              'Aileron', sans-serif;
+$font-secondary:                                                            'Noto Serif', serif;
+$font-body:                                                                 'Aileron', sans-serif;
+
+// font family all
+// =============================================================
+
+$font-all:                                                                  $font-body, $font-primary;
+
+/**! ----- font family init ---- **/
+body {
+    @include font-face($font-all);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:                                                               $font-primary;
+}
+.blockquote {
+  font-family:                                                               $font-secondary;
+}

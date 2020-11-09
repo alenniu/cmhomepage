@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CloudMates</title>
+    <!-- favicon CSS -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+    <!-- custom fonts -->
+    <link href="fonts/aileron.css" rel="stylesheet">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="css/plugins.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+
+<body class="gradient-1" data-spy="scroll" data-target="#navbar-nav" onload="myFunction()">
+
+    <script src="/js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="/js/sweetalert2.min.css">
+    <script>
+        
+    
+    function myFunction() {
+       
+        Swal.fire({
+  title: 'Check out our new COVID-19 Relief Campaign',
+  text: "Support our health care workers in these times.",
+  icon: 'info',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Lets Go!'
+}).then((result) => {
+  if (result.value) {
+    Swal.fire(
+      'Taking you there now!',
+      'Thank you for supporting our community.',
+      'success'
+    )
+    setTimeout(function(){ window.location.assign("http://cloudmates.ca/campaign.html"); }, 1500);
+   ;
+  
+  }
+})
+    }
+   
+        </script>
+    <!-- =========== Preloader Start ============ -->
+    <div class="preloader-main">
+        <div class="preloader-wapper">
+            <svg class="preloader" xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="200">
+                <defs>
+                    <filter id="goo" x="-40%" y="-40%" height="200%" width="400%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -8" result="goo" />
+                    </filter>
+                </defs>
+                <g filter="url(#goo)">
+                    <circle class="dot bg-fill-primary " cx="50" cy="50" r="25" />
+                    <circle class="dot" cx="50" cy="50" r="25" fill="#4c83ff" />
+                </g>
+            </svg>
+            <div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+            </div>
+        </div>
+    </div>
+    <!-- =========== Preloader End ============ -->
+    
+    <div class="main">
+        <!-- =========== Start of Navigation (main menu) ============ -->
+        <header class="navbar navbar-sticky navbar-expand-lg navbar-dark">
+            <div class="container position-relative">
+                <a class="navbar-brand mr-70" href="home.html">
+                    <img class="navbar-brand__regular" src="img/ayyy.png" alt="brand-logo">
+                    <img class="navbar-brand__sticky" src="img/ayyy.png" alt="sticky brand-logo">
+                </a>
+                <!--  End of brand logo -->
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- end of Nav toggler -->
+
+                <div class="navbar-inner">
+                    <!--  Nav close button inside off-canvas/ mobile menu -->
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- end of Nav Toggoler -->
+                    <nav>
+                        <ul class="navbar-nav" id="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tabsop">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#reviews">Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pricing">Pricing</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <!-- <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Classic</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-sidebar-right.html">Sidebar Right</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-sidebar-Left.html">Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-grid-2-col-sidebar-right.html">2 Columns Sidebar Right</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-grid-2-col-sidebar-left.html">2 Columns Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-full.html">Full Width</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Card</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-card-2-col.html">Card 2 Columns</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-card-3-col.html">Card 3 Columns</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-card-full.html">Card Full Width</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog List</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-list-sidebar-right.html">List Sidebar Rigt</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-list-sidebar-left.html">List Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-list-full.html">List Full Width</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog
+                                            Details</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-details-sidebar-right.html">Blog Details Sidebar Right</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-details-sidebar-left.html">Blog Details Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-details-full.html">Blog Details Full</a>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                                   
+                                        
+                                            
+                                            <li>
+                                                <a class="dropdown-item" href="logintoschool.html">Login to School</a>
+                                            </li>
+                                       
+                                    
+                                    <!-- <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Specialty Pages</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="coming-soon.html">Comming Soon</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="download.html">Download</a>
+                                            </li> 
+                                            <li>
+                                                <a class="dropdown-item" href="subscribe-confirmation.html">Subscribe Confirmation</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="maintenance.html">Maintenance</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="error-404.html">Error 404</a>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                                  
+                                    
+                                    <li>
+                                        <a class="dropdown-item" href="faq.html">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- end of nav menu items -->
+                    </nav>
+                </div>
+                <div class="flex-row ml-lg-auto d-md-flex mr-90 mr-lg-0 d-none d-sm-inline-block">
+                    <a href="campaign.html" style="background-color:orange" class="btn rounded-full btn--outline btn--md btn-3d-hover btn-splash-hover ">
+                        <span class="btn__text">COVID-19 CAMPAIGN</span> 
+                    </a>
+                </div>
+
+                <div class="flex-row ml-lg-auto d-md-flex mr-70 mr-lg-0 d-none d-sm-inline-block">
+                    <a href="logintoschool.html" class="btn rounded-full btn--outline btn--sm btn-3d-hover btn-splash-hover ">
+                        <span class="btn__text">Login</span> 
+                    </a>
+                </div>
+                <!-- end of nav cta button -->
+            </div>
+            <!-- end of container -->
+        </header>
+        <!-- =========== End of Navigation (main menu)  ============ -->
+
+       <!-- =========== Start of Hero ============ -->
+       <section class="space-bottom--lg hero hero--dark bg-color-primary hidden">
+            <div class="background-holder background-holder--left-top background-holder--auto">
+                <img src="img/wave-1.png" alt="wave" class="background-image-holder">
+            </div>
+            <!-- end of top left image -->
+            <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-4 mb-50 mb-lg-0">
+                            <div class="d-lg-flex align-items-lg-center position-relative" style="width: 200%">
+                                <div class="hero-content">
+                                        <div class="hero-content py-lg-5 pb-80 text-left">
+                                        <h1 class="hero__title font-w-400">Education's First <br> Student Community Platform</h1>
+                                        <p class="lead hero__description" >CloudMates is the leading Student to Community Platform fit for 
+                                            enhancing daily student life along with well-being. We provide an exclusive community engagment and organization 
+                                            platform tailored to your individual educational institution.</p>
+                                            <a class="lightbox ml-0 ml-sm-3 d-flex align-items-center" data-autoplay="true"
+                                            data-vbtype="video" href="https://vimeo.com/380589807">
+                                            <span class="media-player-icon media-player-icon--xs media-player-icon--outline-white mr-10">
+                                                <i class="icon icon-triangle-right-17"></i>
+                                            </span>
+                                            <span class="btn__text h6-font color-white font-w-400">Watch our video</span>
+                                        </a>
+                                        </div>
+                                        
+                                </div>
+                                
+                                <!-- end of content -->
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-7 offset-lg-1">
+                            <div class="position-relative" style="margin-top: -20%;margin-left: 20%;margin-right: -20%;height: 50% ">
+                            <picture><img class="rounded-lg box-shadow-2" src="img/screen1.png" alt="hero-6-screen"></picture>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <!-- end of row -->
+                </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-lg-flex align-items-lg-start position-relative text-md-center">
+                            <div class="background-holder background-holder--right-bottom background-holder--auto ml-lg-5 d-none d-lg-block z-index-1">
+                                <img src="img/dots-pattern-3.png" alt="wave" class="background-image-holder">
+                            </div>
+                            <!-- end of dots -->
+                            <!-- <picture class="hero__image mb-lg-40 mb-lg-0 pos-abs-lg-top-right">
+                                <img src="img/screen1.png" alt="hero-image">
+                            </picture> -->
+                        
+                            <!-- end of mobile image -->
+                            
+                            <!-- end of content -->
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+
+            
+            <div class="hero__shape">
+                <img src="img/hero-svg-shape-3.svg" alt="hero bg" class="svg">
+            </div>
+            <!-- end of hero svg shape -->
+        </section>
+        <!-- =========== End of Hero ============ -->
+       
+        
+
+        <!-- =========== Start of Features ============ -->
+        <section class="space-top" id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-10 col-lg-7 col-xl-6 mx-auto">
+                        <div class="section-title reveal text-center mb-80">
+                            <p class="mb-10 text-uppercase font-w-700">Why choose CloudMates?</p>
+                            <h3 class="font-w-400">A simple, proven way to enhance school experience.</h3>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                </div>
+                <!-- end of row -->
+                <div class="row border-bottom-light space-bottom reveal">
+                    <div class="col-12 col-md-6 col-lg-4 mb-30 mb-lg-0">
+                        <div class="features">
+                            <div class="d-flex mb-20">
+                                <span class="mr-20">
+                                    <img src="img/family.png" alt="family">
+                                </span>
+                                <h5>One Platform</h5>
+                            </div>
+                            <p><span class="color-primary">No more wasting time.</span> Now, just visit your school's CloudMates and see needed resources updated by your students. Easy, simple, resourceful.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-12 col-md-6 col-lg-4 mb-30 mb-lg-0">
+                        <div class="features">
+                            <div class="d-flex mb-20">
+                                <span class="mr-20">
+                                    <img src="img/b-meeting.png" alt="communication">
+                                </span>
+                                <h5>Communication</h5>
+                            </div>
+                            <p><span class="color-primary">Communicate with everyone in your school.</span> You can easily connect and engage with everyone in every grade at you school through your school's CloudMates.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-12 col-md-6 col-lg-4 mb-30 mb-lg-0">
+                        <div class="features">
+                            <div class="d-flex mb-20">
+                                <span class="mr-20">
+                                    <img src="img/filter-organization.png" alt="management">
+                                </span>
+                                <h5>Community</h5>
+                            </div>
+                            <p><span class="color-primary">Make your School like Family.</span> With CloudMates, host events and community activities easily and effeciently. Be able to actively engage your community and make it like family.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of Features ============ -->
+
+        <!-- =========== Start of About ============ -->
+        <section class="space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-10 col-lg-5 mb-50 mb-lg-0">
+                        <p class="mb-10 text-uppercase font-w-700">Organization</p>
+                        <h3 class="mb-20 font-w-400">CloudMates allows you to organize your school clubs, teams, and events.</h3>
+                        <p class="mb-40">Forgot your next club meeting? Forget the date of your next sports game? Wanna host an event? With CloudMates, you can easily
+                            organize everything clearly in one central place. </p>
+                        <a href="contact.html" class="btn btn--transparent p-0 btn--arrow-after btn--color-dark btn-border-hover">
+                            <span class="btn__text mr-30">Find out more</span>
+                        </a>
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-12 col-md-9 col-lg-6 ml-lg-auto reveal">
+                        <div class="position-relative">
+                            <picture><img class="rounded-default" src="img/clubs1.png" alt=""></picture>
+                            <a class="lightbox pos-center media-player-icon media-player-icon--md media-player-icon--fill-primary btn-splash-hover" data-autoplay="true" data-vbtype="video" href="https://vimeo.com/380589807"><i class="icon icon-triangle-right-17"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of About ============ -->
+
+        <!-- =========== Start of Features Tab Slider ============ -->
+        <section class="bg-color-primary features-custom-container" id="tabsop">
+            <div class="overlap overlap--lg overlap--gray z-index1 d-none d-xl-block"></div>
+            <div class="content-wrapper">
+                <div class="container">
+                    <div class="row align-items-center align-items-xl-start">
+                        <div class="col-12 col-md-6 col-xl-6 mb-md-40 mb-xl-0 mt-xl-5">
+                            <p class="lead mb-10 font-w-700 text-uppercase">So Many Resources</p>
+                            <h3 class="mb-20 font-w-400">Be able to access all these resources set by you and more</h3>
+                            <p class="mb-30 mb-lg-0">These components are fully up to your school leadership to customize, update and engage with the school community. 
+                                These are our fully custom core features.
+                            </p>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-12 col-md-5 offset-md-1 offset-xl-0 col-xl-6 z-index2 reveal">
+                            <picture class="device-image"><img src="img/i3.png" alt="mobile"></picture>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of container -->
+            </div>
+            <!-- end of container -->
+            <div class="features features--slider-2 pt-100 mt-xl-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="slider slider-tabs mb-20">
+                                <div class="slide"><button class="slider-tab">Dashboard</button></div>
+                                <div class="slide"><button class="slider-tab">Announcements</button></div>
+                                <div class="slide"><button class="slider-tab">Landing</button></div>
+                                <div class="slide"><button class="slider-tab">Lunch Menu</button></div>
+                                <div class="slide"><button class="slider-tab">Mentor</button></div>
+                                <div class="slide"><button class="slider-tab">Houses/Clubs</button></div>
+                                <div class="slide"><button class="slider-tab">Community Service</button></div>
+                                <div class="slide"><button class="slider-tab">Polls</button></div>
+                            </div>
+                            <!-- end of slider tab -->
+                            <div class="slider slider-contents">
+                                <div class="slide">
+                                    <p>All daily announcements, weekly scheldules, daily weather, and leaderboards will be here. 
+                                        With exclusive accessive for users with Administrative controls to edit the announcements and scheldules with a click of a button.
+                                    </p>
+                                </div>
+                                <!-- end of single item -->
+                                <div class="slide">
+                                    <p>Weekly or Monthly Regarding the School will be posted here with clear, large components. Administrative students will be able to add, edit or remove announcements
+                                        with a fully customized Editor to style it however they would like.</p>
+                                </div>
+                                <!-- end of single item -->
+                                <div class="slide">
+                                        <p>Beatiful Landing Page for students that can be used to access all of the schools other resources with a click of a button.
+                                            This should act as a main page where students can visit all of their needed resources not provided at CloudMates effectively. </p>
+                                    </div>
+                                    <!-- end of single item -->
+                                    <div class="slide">
+                                            <p>School's with dedicated Lunch Programs can easily change/edit a weekly or monthly menu for 1, 2 or more options. This will provide ease of access for students to be able to decide and know what
+                                                lunch the school is providing for them, thus allowing them to make effecient decisions.
+                                            </p>
+                                        </div>
+                                        <!-- end of single item -->
+
+                                <div class="slide">
+                                    <p>One of Our Most Key Features. This component allows students to create posts asking questions about anything related to the school either academic, athletic or others. Other students
+                                         regardless of grade level can see these posts and provide helpful responses to each other. This is a tool meant to bring the community together, uniting students regardless of grade or passions.
+                                    </p>
+                                </div>
+                                <!-- end of single item -->
+
+                                <div class="slide">
+                                    <p>An amazing opportunity for students to create their own club page to easily notify to members about club announcements, files, resources, and events. This also applies to sports teams and other groups.  </p>
+                                </div>
+                                <div class="slide">
+                                    <p>Ontario Students need 40 Hours of Community Service but sometimes have trouble fulfilling these. Our Community Service Calendar will contain as many community service opportunities as possible in the next months 
+                                        in a clear and detailed way.
+                                    </p>
+                                </div>
+                                <!-- end of single item -->
+
+                                <div class="slide">
+                                    <p>Any quick polls or surveys the student council/clubs/school administration wants to conduct, do it easily through our
+                                        polls and voting system with strong authorization systems making fair results.
+                                    </p>
+                                </div>
+                                <!-- end of single item -->
+                            </div>
+                            <!-- end of slider content -->
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of container -->
+            </div>
+            <!-- end of features -->
+        </section>
+        <!-- =========== End of Features Tab Slider ============ -->
+
+        <!-- =========== Start of CTA ============ -->
+        <section class="space-top--md bg-color-grey">
+            <div class="overlap overlap--white z-index1"></div>
+            <div class="background-holder background-holder--auto background-holder--bottom">
+                <img src="img/bg-diagonal-lines.png" alt="pattern" class="background-image-holder">
+            </div>
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-lg-6 mx-auto">
+                        <div class="section-title reveal text-center mb-80">
+                            <p class="mb-10 text-uppercase font-w-700">CloudMates Unites Community</p>
+                            <h3 class="font-w-400">Bring your school community closer, like family.</h3>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-5 col-xl-4 z-index2 reveal">
+                        <div class="card text-center mb-30 mb-md-0">
+                            <div class="header pl-40 pr-40 py-5 border-bottom-light">
+                                <span class="mb-30 icon-rounded position-relative">
+                                    <i class="icon icon-p-heart"></i>
+                                </span>
+                                <h5 class="mb-10">One Platform, <br> <span class="color-primary">Solves Everything</span></h5>
+                                <p class="mb-40">View and Interact with all of your School Resources of Students. Anyone 
+                                    can take advantage of the community website for the school.
+                                </p>
+                                <a href="contact.html" class="btn btn--transparent btn--arrow-after btn--color-dark btn-border-hover">
+                                    <span class="btn__text mr-30">Get CloudMates Now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of row -->
+                    <div class="col-12 col-md-6 col-lg-5 col-xl-4 z-index2 reveal">
+                        <div class="card text-center mb-30 mb-md-0">
+                            <div class="header pl-40 pr-40 py-5 border-bottom-light">
+                                <span class="mb-30 icon-rounded position-relative">
+                                    <i class="icon icon-grid-45"></i>
+                                </span>
+                                <h5 class="mb-10">Fast Management, <br> <span class="color-primary">Easy to Organize</span></h5>
+                                <p class="mb-40">You will be able to customize almost everything in a matter of clicks. With enhanced 
+                                    moderation tools, the best experience arises..</p>
+                                <a href="contact.html" class="btn btn--transparent btn--arrow-after btn--color-dark btn-border-hover">
+                                    <span class="btn__text mr-30">Find out more</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of col -->
+        </section>
+        <!-- =========== End of CTA ============ -->
+
+        <!-- =========== Start of Features-2 ============ -->
+        <section class="space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-10 col-lg-7 col-xl-6 mx-auto">
+                        <div class="section-title reveal text-center mb-80">
+                            <p class="mb-10 text-uppercase font-w-700">More than just a software</p>
+                            <h3 class="font-w-400">
+                                    We shape the lives of our future.</h3>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row d-lg-flex flex-column-reverse flex-lg-row align-items-center ">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-4 offset-xl-1 reveal">
+                        <div class="features mb-30 mb-lg-40">
+                            <div class="d-flex align-items-center mb-10">
+                                <span class="mr-20">
+                                    <i class="icon icon-book-open-2 color-primary h3-font"></i>
+                                </span>
+                                <h5>Compelete Setup Guide</h5>
+                            </div>
+                            <p>No more confusing options and choices. Everything will be fully detailed and explained to students on the hows and the whats of using the platform. 
+                            </p>
+                        </div>
+                        <!-- end of single item -->
+                        <div class="features mb-30 mb-lg-40">
+                            <div class="d-flex align-items-center mb-10">
+                                <span class="mr-20">
+                                    <i class="icon icon-p-heart color-primary h3-font"></i>
+                                </span>
+                                <h5>Security is our #1</h5>
+                            </div>
+                            <p>Our company has implemented layers of high-end Security protection. We believe the privacy of our Users is the most important aspect. All user accounts information are encrypted through advanced encryption methods.
+                            </p>
+                        </div>
+                        <!-- end of single item -->
+                        <div class="features mb-30 mb-lg-40">
+                            <div class="d-flex align-items-center mb-10">
+                                <span class="mr-20">
+                                    <i class="icon icon-preferences-circle color-primary h3-font"></i>
+                                </span>
+                                <h5>Super Easy Interface</h5>
+                            </div>
+                            <p>Our interface is smooth and very easy to navigate. All the pages are named accordingly, with simplified management controls. 
+                            </p>
+                        </div>
+                        <!-- end of single item -->
+                    </div>
+                    <!-- enf of col -->
+                    <div class="col-12 col-lg-6 col-xl-6 mb-50 mb-lg-0 text-center reveal">
+                        <picture style="height:500px"><img class="rounded-default" src="img/dodd.jpg" alt="team-image"></picture>
+                    </div>
+                    <!-- end of image -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of Features-2 ============ -->
+
+        <!-- =========== Start of Content Block ============ -->
+        <section class="space-bottom switchable d-md-flex align-items-md-center">
+            <div class="col-md-6 pl-md-0 mb-40 mb-md-0 text-center text-md-left">
+                <picture class="switchable__image">
+                    <img src="img/dda.png" alt="dashboard-image">
+                </picture>
+            </div>
+            <!-- end of image -->
+
+            <div class="switchable__text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center text-md-left ml-md-auto reveal">
+                            <h3 class="mb-4 font-w-400">Super clean user <br>interface for easier use. </h3>
+                            <p class="mb-5">We have constructed a modern User Interface suitable to students of any school in North America. We love to help students
+                                in the best way possible, so we made our intereface easy to use, feature heavy and simply <b>"Beautiful"</b>.</p>
+                            <a href="contact.html" class="btn rounded-full btn--bg-primary btn-3d-hover btn-splash-hover">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of content -->
+        </section>
+        <!-- =========== End of Content Block ============ -->
+
+        <!-- =========== Start of Content Pricing ============ -->
+        <section class="space bg-color-grey" id="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 mx-auto">
+                        <div class="section-title reveal text-center mb-80">
+                            <p class="mb-10 text-uppercase font-w-700">Schools trust CloudMates</p>
+                            <h3 class="font-w-400">CloudMates is now <br> FREE.</h3>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row mb-100">
+                    <div class="col-12 text-center">
+                        <div class="pricing-tab btn-group outline-light rounded-default">
+                            <button type="button" class="btn btn--bg-primary btn-no-focused data-type-monthly"> <span class="btn__text">Monthly</span></button>
+                            
+                            <button type="button" class="btn btn-no-focused ml-0 data-type-yearly"><span class="btn__text">Yearly</span>
+                                <span class="badge bg-color-coral badge-pill pos-abs-top-right py-2 px-3">15% OFF</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of tab row -->
+                <div class="row justify-content-center reveal">
+                    <div class="col-12 col-sm-6 mx-sm-auto col-xl-3 mb-40 mb-xl-0">
+                        <div class="card text-center rounded-md">
+                            <div class="header d-flex flex-column align-items-center pt-30 pb-20 border-bottom-light">
+                                <span class="font-size-14 text-uppercase font-w-600 mb-20">Standard</span>
+                                <span class="icon-rounded icon-rounded--lg position-relative mb-10"> 
+                                    <i class="icon icon-sofa"></i> 
+                                </span>
+                                <h2 class="h4-font color-light-secondary">Free</h2>
+                            </div>
+                            <div class="body pb-40 pr-30 pl-30">
+                                <ul class="mt-30 mb-30">
+                                    <li class="mb-3 color-light-secondary-2">10,000 Posts per month</li>
+                                    <li class="mb-3 color-light-secondary-2">Server and Database Mangement</li>
+                                    <li class="mb-3 color-light-secondary-2">Custom Domain URL</li>
+                                    <li class="mb-3 color-light-secondary-2">Email support</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn--sm rounded-full btn--color-primary w-100 btn-3d-hover btn-splash-hover btn--bg-grey">
+                                    <span class="btn__text">Choose Plan</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-12 col-sm-6 mx-sm-auto col-xl-3 mb-40 mb-xl-0">
+                        <div class="card text-center rounded-md card--focused">
+                            <div class="header d-flex flex-column align-items-center pt-30 pb-20 border-bottom-light">
+                                <span class="font-size-14 text-uppercase font-w-600 mb-20">Gold</span>
+                                <span class="icon-rounded icon-rounded--lg position-relative mb-10"> 
+                                    <i class="icon icon-home-3"></i> 
+                                </span>
+                              
+                             
+
+                             <h2 class="card__value h4-font"><s>$25</s> Free</h2> 
+                            
+                                <h2 class="card__value h4-font card__value--focused"><s>$45</s> Free</h2>
+                            </div>
+                            <div class="body pb-40 pr-30 pl-30">
+                                <ul class="mt-30 mb-30">
+                                    <li class="mb-3 color-light-secondary-2">Everything in Standard +</li>
+                                    <li class="mb-3 color-light-secondary-2">Unlimited Posts</li>
+                                    <li class="mb-3 color-light-secondary-2">24 Revisions per Year</li>
+                                    <li class="mb-3 color-light-secondary-2">Designated Duo Service</li>
+                                    <li class="mb-3 color-light-secondary-2">Text/Call/Email Support</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn--sm rounded-full w-100 btn-3d-hover btn-splash-hover btn--bg-white">
+                                    <span class="btn__text">Get started</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-12 col-sm-6 mx-sm-auto col-xl-3 mb-40 mb-xl-0">
+                        <div class="card text-center rounded-md">
+                            <div class="header d-flex flex-column align-items-center pt-30 pb-20 border-bottom-light">
+                                <span class="font-size-14 text-uppercase font-w-600 mb-20">Diamond</span>
+                                <span class="icon-rounded icon-rounded--lg position-relative mb-10"> 
+                                    <i class="icon icon-building"></i> 
+                                </span>
+                                <h2 class="card__value h4-font color-light-secondary"><s>$50</s> Free</h2>
+                                <h2 class="card__value h4-font color-light-secondary card__value--focused"><s>$70</s> Free</h2>
+
+                            </div>
+                            <div class="body pb-40 pr-30 pl-30">
+                                <ul class="mt-30 mb-30">
+                                    <li class="mb-3 color-light-secondary-2">Everything in Gold +</li>
+                                    <li class="mb-3 color-light-secondary-2">Designated Service Team</li>
+                                    <li class="mb-3 color-light-secondary-2">Unlimited Revisions</li>
+                                    <li class="mb-3 color-light-secondary-2">Mobile Compatability</li>
+                                    <li class="mb-3 color-light-secondary-2">Text/Call 24/7 Support</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn--sm rounded-full btn--color-primary w-100 btn-3d-hover btn-splash-hover btn--bg-grey">
+                                    <span class="btn__text">Get started</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-12 col-sm-6 mx-sm-auto col-xl-3 mb-40 mb-xl-0">
+                        <div class="card text-center rounded-md">
+                            <div class="header d-flex flex-column align-items-center pt-30 pb-20 border-bottom-light">
+                                <span class="font-size-14 text-uppercase font-w-600 mb-20">Enterprise</span>
+                                <span class="icon-rounded icon-rounded--lg position-relative mb-10"> 
+                                    <i class="icon icon-hotel"></i> 
+                                </span>
+                                <h2 class="card__value h4-font color-light-secondary"><s>$199</s> $60</h2>
+                                <h2 class="card__value h4-font color-light-secondary card__value--focused"><s>$259</s> | $90</h2>
+                            </div>
+                            <div class="body pb-40 pr-30 pl-30">
+                                <ul class="mt-30 mb-30">
+                                    <li class="mb-3 color-light-secondary-2">Complete Hosting Package</li>
+                                    <li class="mb-3 color-light-secondary-2">Get CloudChat <i>in beta</i></li>
+                                    <li class="mb-3 color-light-secondary-2">Full Customization</li>
+                                    <li class="mb-3 color-light-secondary-2">In Person Team Support</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn--sm rounded-full btn--color-primary w-100 btn-3d-hover btn-splash-hover btn--bg-grey">
+                                    <span class="btn__text">Get started</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of pricing row -->
+            </div>
+        </section>
+        <!-- =========== End of Content Pricing ============ -->
+
+        <!-- =========== Start of Testimonial ============ -->
+        <section class="space bg-color-darkgrey testimonial-carousel" id="reviews">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 mx-auto">
+                        <div class="section-title reveal text-center mb-80">
+                            <p class="mb-10 text-uppercase font-w-700">Schools Love CloudMates</p>
+                            <h3 class="font-w-400">People love CloudMates. <br> See some of the stories.</h3>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-6 col-xl-5 mt-lg-5 mr-xl-1 mb-50 mb-lg-0 reveal">
+                        <div class="testimonial-content text-center text-lg-left">
+                            <div class="slide">
+                                <blockquote class="blockquote mb-40">
+                                    <h5 class="font-w-300">“My school life before CloudMates had challenges — I was very unorganized, I lost all my scheldules on the second day of school, I had no idea what the lunch was every other day, and I always forgot what my homework was. So with CloudMates, the ability to access all these resources honestly saved me hundreds of hours.”</h5>
+                                </blockquote>
+                                <span class="font-size-21 font-w-700 text-uppercase mb-1 color-white">Jacob </span>
+                                <p class="mb-20">Student at Upper Canada College</p>
+                                <span><img src="img/ucc.on.png" alt="atlassian"></span>
+                            </div>
+                            <!-- end of singl slide -->
+                            <div class="slide">
+                                <blockquote class="blockquote mb-40">
+                                <h5 class="font-w-300">“CloudMates makes my job and life easier, students can get information almost instantly and truly inspires community engagement.” </h5>
+                                </blockquote>
+                                <span class="font-size-21 font-w-700 text-uppercase mb-1 color-white">Ms. Li</span>
+                                <p class="mb-20">Teacher at Upper Canada College</p>
+                                <span><img src="img/ucc.on.png" alt="atlassian"></span>
+                            </div>
+                            <!-- end of singl slide -->
+                            <div class="slide">
+                                <blockquote class="blockquote mb-40">
+                                <h5 class="font-w-300">“Truly Phenomenal. One of the most innovative ideas in the Education Industry. This will unite and push students towards the education of our future.” </h5>
+                                </blockquote>
+                                <span class="font-size-21 font-w-700 text-uppercase mb-1 color-white">Martynas Alekna</span>
+                                <p class="mb-20">Student at Vilniaus University</p>
+                                <span><img src="img/logo3v.png" alt="atlassian"></span>
+                            </div>
+                            <!-- end of singl slide -->
+                        </div>
+                        <!-- end of content row -->
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-12 col-lg-6 col-xl-5 reveal">
+                        <div class="testimonial-image text-center text-lg-left">
+                            <div class="slide">
+                                <picture><img class="rounded-default" src="img/uccp1.jpg" alt="client" style="margin-top: 20%"></picture>
+                            </div>
+                            <!-- end of singl slide -->
+                            <div class="slide">
+                                <picture><img class="rounded-default" src="img/ucc4.jpg" alt="client"  style="margin-top: 20%"></picture>
+                            </div>
+                            <!-- end of singl slide -->
+                            <div class="slide">
+                                <picture><img class="rounded-default" src="img/ttt4.jpg" alt="client" style="margin-top: 20%"></picture>
+                            </div>
+                            <!-- end of singl slide -->
+                        </div>
+                        <!-- end of image row -->
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of Pricing ============ -->
+
+        <!-- =========== Start of Newsletter ============ -->
+        <section class="bg-color-primary space">
+            <div class="background-holder background-holder--contain">
+                <img src="img/cta-bg.png" alt="pattern" class="background-image-holder">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 text-center mx-auto reveal">
+                        <h3 class="mb-20 font-w-400">CloudMates if currently FREE!</h3>
+                        <p class="lead mb-50">Millions of students around the world have already made CloudMates the place where dreams happen.</p>
+                        <div class="position-relative text-center">
+                            <form action="subscribe-confirmation.html" class="form form-subscription">
+                                <div class="input-group mb-3 mb-sm-0">
+                                    <input type="email" class="form-control rounded-full" placeholder="Enter your email to start" required>
+                                </div>
+                                <button class="btn rounded-full btn--submit btn--color-primary btn--bg-white" type="submit">
+                                    <span class="btn__text">Get started</span>
+                                </button>
+                            </form>
+                            <span class="type--fine-print">No credit card required.</span>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of Newsletter ============ -->
+        <!-- =========== Start of CTA ============ -->
+        <section class="space hidden border-bottom-light">
+            <div class="container">
+                <div class="row align-items-center flex-column-reverse flex-md-row justify-content-center">
+                    <div class="col-12 col-md-5">
+                        <div class="section-title reveal text-center text-md-left mb-80 mb-sm-50 reveal">
+                            <h3 class="mb-3 font-w-400">Anyone can use it!</h3>
+                            <p class="lead">Big, small, international, private, public schools all can use CloudMates for them. We love to attract a diverse community with the ultimate goal of enriching the education experience
+                                for the leaders of our future.
+                            </p>
+                            <div class="button-group flex-column flex-sm-row align-items-center justify-content-center justify-content-md-start mt-50">
+                                <a href="#" class="mr-sm-3 mb-10 mb-sm-0 box-shadow-2 rounded-md btn-3d-hover transition-default">
+                                    <img src="img/outpp.png" class="rounded-md" alt="app-store">
+                                </a>
+                                <a href="#" class="box-shadow-2 rounded-md btn-3d-hover transition-default">
+                                    <img src="img/app-store-md.png" class="rounded-md" alt="google-play">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 ml-md-auto text-center text-md-right reveal">
+                        <div class="position-relative d-flex align-items-center justify-content-center z-index1">
+                            <div class="oval pos-center z-index-1"></div>
+                            <picture>
+                                <img src="img/mobile-3.png" alt="mobile">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =========== End of CTA ============ -->
+        <!-- =========== Start of Footer ============ -->
+        <footer class="footer position-relative">
+            <div class="space border-bottom-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 col-lg-3 mb-20 mb-lg-0">
+                            <span class="mb-20">
+                                <a href="#"><img src="img/logo-icon-color.png" alt="logo"></a>
+                            </span>
+                            <p>CloudMates is an amazing school indidually tailored platform for all highschools. We believe in the leaders of our future. Get CloudMates for your school today.</p>
+                            <ul class="social-lists d-flex mb-0 mt-30">
+                                    <li><a href="https://www.instagram.com/cloudmates/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://twitter.com/cloudmatesCA"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            <!-- end of social list -->
+
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                            <div class="footer-widget">
+                                <h6 class="mb-20">Company</h6>
+                                <ul>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Press</a></li>
+                                    <li><a href="#">Brand Guidelines</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                            <div class="footer-widget">
+                                <h6 class="mb-20">Product</h6>
+                                <ul>
+                                    <li><a href="#">Why CloudMates?</a></li>
+                                    <li><a href="#">Enterprise</a></li>
+                                    <li><a href="#">Customer Stories</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">Security</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                            <div class="footer-widget">
+                                <h6 class="mb-20">Address</h6>
+                                <p class="">1800 Bay Street, <br> Toronto, M5H 2S6, <br> ON, Canada.</p>
+
+                                <div class="mt-30 d-flex align-items-start flex-column flex-md-row">
+                                    
+                                    <span class="color-primary mr-20 mt-10 mb-10 mb-md-0"><i class="icon icon-email"></i></span>
+
+                                    <div>
+                                        <h6>Send us an email</h6>
+                                        <a href="mailto:info@cloudmates.ca">
+                                            <p>info@cloudmates.ca</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of container -->
+            </div>
+            <!-- end of main footer -->
+            <div class="bg-color-grey py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-md-flex justify-content-between align-items-center">
+                            <nav class="nav">
+                                <ul class="d-flex mb-md-0">
+                                    <li><a href="contact.html">Status</a></li>
+                                    <li><a href="contact.html">Privacy & Terms</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                            <!-- end of mini footer nav -->
+                            <div class="d-flex justify-content-between ml-auto">
+                                <div class="lang-selector mr-30 position-relative">
+                                    <button class="lang-selector__button" type="button">
+                                        <img src="img/flag-usa.png" alt="United States" class="flag-image">
+                                        <span>English</span>
+                                        <i class="fa fa-angle-up"></i>
+                                    </button>
+                                    <!-- end of language selector button -->
+
+                                    <ul class="lang-dropdown mb-0">
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-usa.png"
+                                                    alt="United States" class="flag-image mr-10">English</a>
+                                        </li>
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-spain.png"
+                                                    alt="United States" class="flag-image mr-10">Spanish</a>
+                                        </li>
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-france.png"
+                                                    alt="United States" class="flag-image mr-10">France</a>
+                                        </li>
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-bangladesh.png"
+                                                    alt="United States" class="flag-image mr-10">Bengali</a>
+                                        </li>
+                                    </ul>
+                                    <!-- end of language selector dropdown-->
+                                </div>
+                                <!-- end of language selector -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of container -->
+            </div>
+            <!-- mini footer end -->
+        </footer>
+        <!-- =========== End of Footer ============ -->
+    </div>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

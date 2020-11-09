@@ -1,0 +1,91 @@
+// MARKUP:
+// 
+// <div class="lang-selector mr-30 position-relative">
+//   <button class="lang-selector__button" type="button">
+//       <img src="img/flag-usa.png" alt="United States" class="flag-image">
+//       <span>English</span>
+//       <i class="fa fa-angle-up"></i>
+//   </button>
+
+//   <ul class="lang-dropdown mb-0">
+//       <li>
+//           <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-usa.png" alt="United States" class="flag-image mr-10">English</a>
+//       </li>
+//       <li>
+//           <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-spain.png" alt="United States" class="flag-image mr-10">Spanish</a>
+//       </li>
+//       <li>
+//           <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-france.png" alt="United States" class="flag-image mr-10">France</a>
+//       </li>
+//       <li>
+//           <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-bangladesh.png" alt="United States" class="flag-image mr-10">Bengali</a>
+//       </li>
+//   </ul>
+// </div>
+
+.lang-selector {
+  &__button {
+    background: transparent;
+    padding: 0;
+    font-size: rem(14);
+
+    .flag-image {
+      margin-#{$right}: rem(10);
+      max-height: rem(20);
+    }
+
+    span {
+      margin-#{$right}: rem(5);
+      font-weight: 700;
+      color: $color-on-light-secondary;
+      #{$theme-dark} &{
+        color: $color-on-light-secondary-2;
+      }
+    }
+    i{
+      #{$theme-dark} &{
+        color: $color-on-light-secondary-2;
+      }
+
+    }
+  }
+  /**! ----- language selctor dropdown---- **/
+  .lang-dropdown {
+    border: 0;
+    padding: rem(10);
+    margin: 0;
+    @include pos-abs(auto, auto, 40px, 0);
+    @extend .box-shadow-2;
+    @extend .rounded-default;
+    background: $color-white;
+    display: block;
+    min-width: rem(200);
+    display: none;
+
+    &:before {
+      content: '';
+      @include pos-abs(auto, auto, -10px, 20px);
+      @include arrow(down, 10, #fff);
+    }
+
+    @include media(md) {
+      @include pos-abs(auto, auto, 50px, 0);
+
+    }
+
+    &__item {
+      padding: rem(12);
+      @extend .rounded-default;
+      text-transform: uppercase;
+      font-size: rem(14);
+      font-weight: 700;
+      color: $color-on-light-primary;
+      transition: .3s;
+
+      &:focus,
+      &:hover {
+        @extend %color-primary;
+      }
+    }
+  }
+}

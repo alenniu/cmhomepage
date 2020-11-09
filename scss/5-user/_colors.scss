@@ -1,0 +1,48 @@
+//  Color palette 
+// =============================================================
+
+// Main Colors
+$color-white:                                                               #fff;
+$color-primary:                                                             #2f5bea;
+$color-blue-2:                                                              #5179ec;
+$color-indigo:                                                              #3A6CC5;
+$color-on-light-primary:                                                    #2c2e30;
+$color-on-light-secondary:                                                  #54565a;
+$color-on-light-secondary-2:                                                #7e8085;
+$dark-blue-grey:                                                            #c5d0e6;
+$light-blue-grey:                                                           #e3e4e6;
+$cadillac:                                                                  #a6546e;
+$paradiso:                                                                  #2A7871;
+$coral:                                                                     #fc5c42;
+$bright-yellow:                                                             #f5e658;
+$very-light-blue:                                                           #e7eaee;
+$iron:                                                                      #D2D5DA;
+$pale-grey:                                                                 #f6f8f9;
+$dark-grey:                                                                 #2D3136;
+$slate:                                                                     #545f75;
+$darkblue:                                                                  #151c32;
+$midnight:                                                                  #01081f;
+$cloud-burst:                                                               #1E2745;
+
+
+//  Theme Demo Colors 
+// =============================================================
+
+// Simply add any of below Classes to the <body> tag
+// EXAMPLE: <body class="theme-green" data-spy="scroll" data-target="#navbar-nav">
+
+
+// Solid colors
+$theme-green:                                                               #27ae60;
+$theme-violet:                                                              #9b59b6;
+$theme-firoza:                                                              #16a085;
+$theme-red:                                                                 #e74c3c;
+$theme-orange:                                                              #ee8663;
+
+// gradient colors
+$gradient-1:                                                                 linear-gradient(-45deg, #2f1ce0 0%, #53a0fd 50%, #51eca5 100%);
+$gradient-2:                                                                 linear-gradient(90deg, #0099FF 0%, #6610f2 100%);
+$gradient-3:                                                                 linear-gradient(150deg, #2d1582 0%, #19a0ff 100%);
+$gradient-4:                                                                 linear-gradient(to right, #642B73 0%, #C6426E 100%);
+$gradient-5:                                                                 linear-gradient(150deg, #1A6B89 0%, #2A7871 100%);
+$gradient-6:                                                                 linear-gradient(-134deg, #C86DD7 0%, #3023AE 100%);

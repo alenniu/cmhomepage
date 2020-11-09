@@ -1,0 +1,268 @@
+/**! ----- Icon Dotted---- **/
+// MARKUP:
+// <span class="icon-dotted position-relative">
+// <i class="icon icon-pin-2"></i>
+// </span>
+.icon-dotted {
+    background: $slate;
+    width: rem(98);
+    height: rem(98);
+    border-radius: 100px;
+    text-align: center;
+
+    &:after {
+        content: "";
+        @include centerer;
+        background: url(../icons/oval-dotted.svg) no-repeat center;
+        width: rem(114);
+        height: rem(114);
+    }
+
+    .icon {
+        font-size: rem(40);
+        color: $color-white;
+        line-height: rem(98);
+    }
+
+    &:hover {
+        &:after {
+            animation: infinite-spinning 5s infinite linear;
+        }
+    }
+}
+
+/*---------- spinning Animation ----------*/
+
+@keyframes infinite-spinning {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+
+        @include rtl {
+            transform: translate(50%, -50%) rotate(360deg);
+
+        }
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+
+        @include rtl {
+            transform: translate(50%, -50%) rotate(0deg);
+
+        }
+
+    }
+}
+
+/**! ----- Icon Rounded---- **/
+// MARKUP:
+// <span class="icon-rounded position-relative">
+// <i class="icon icon-pin-2"></i>
+// </span>
+
+// MODIFIER:
+// icon-rounded--lg : Larger icon
+.icon-rounded {
+    background: rgba($color: $color-primary, $alpha: .08);
+    width: rem(98);
+    height: rem(98);
+    border-radius: 100px;
+    text-align: center;
+
+    &--lg {
+        width: rem(110);
+        height: rem(110);
+
+    }
+
+    .icon {
+        font-size: rem(40);
+        @extend %color-primary;
+        line-height: rem(98);
+    }
+
+    &.icon-rounded--lg {
+        .icon {
+            font-size: rem(42);
+            line-height: rem(110);
+        }
+    }
+
+}
+
+.rating__star {
+    i {
+        color: #f5b123;
+        opacity: .43;
+
+        &.active {
+            opacity: 1;
+        }
+
+    }
+}
+
+
+/**! ----- Media Player Icon ---- **/
+
+// MARKUP:
+// <span class="media-player-icon media-player-icon media-player-icon--sm media-player-icon--fill-grey">
+// <i class="icon icon-triangle-right-17"></i> 
+// </span>
+
+// MODIFIERS:
+// .media-player-icon--lg  - for Larger icon
+// .media-player-icon--md - for medium icon
+// .media-player-icon--sm - for smaller icon
+// .media-player-icon--xs - for extra small icon
+// .media-player-icon--fill-primary - for background primary
+// .media-player-icon--fill-grey - for background grey
+// .media-player-icon--fill-coral - for background coral
+// .media-player-icon--outline-white - for outline white and background transparent. It will only visible on dark bg.
+
+.media-player-icon {
+    text-align: center;
+    border-radius: 100px;
+    transition: .3s;
+
+    i {
+        position: relative;
+    }
+
+
+    &--xs {
+        font-size: rem(10);
+        height: rem(22);
+        width: rem(22);
+        line-height: rem(22);
+
+        &[class*="media-player-icon--fill-"] {
+            i {
+                top: 1px;
+            }
+        }
+
+    }
+
+    &--sm {
+        font-size: rem(15);
+        height: rem(35);
+        width: rem(35);
+        line-height: rem(35);
+
+        &[class*="media-player-icon--fill-"] {
+            i {
+                top: 2.5px;
+            }
+        }
+
+    }
+
+    &--md {
+        font-size: rem(32);
+        height: rem(96);
+        width: rem(96);
+        line-height: rem(96);
+        box-shadow: 0 0 0 2px rgba($color-white, .5);
+
+        &:hover {
+            box-shadow: 0 0 0 10px rgba($color-white, .2);
+        }
+
+        i {
+            margin-left: rem(5);
+            top: rem(3);
+        }
+
+    }
+
+    &--lg {
+        @extend .media-player-icon--md;
+
+        @include media(lg) {
+            font-size: rem(32);
+            height: rem(122);
+            width: rem(122);
+            line-height: rem(122);
+            box-shadow: 0 0 0 2px rgba($color-white, .5);
+
+            &:hover {
+                box-shadow: 0 0 0 10px rgba($color-white, .2);
+            }
+
+            i {
+                margin-left: rem(5);
+                top: rem(3);
+            }
+        }
+    }
+
+    &--fill-primary {
+        @extend %bg-color-primary;
+        color: $color-white;
+
+        &:hover {
+            color: $color-white;
+        }
+
+    }
+
+    &--fill-coral {
+        background: $coral;
+        color: $color-white;
+        box-shadow: 0 21px 16px 0 rgba(0, 0, 0, 0.09);
+
+        &:hover {
+            color: $color-white;
+        }
+
+    }
+
+    &--fill-grey {
+        background: $light-blue-grey;
+        color: $color-white;
+
+        i {
+            margin-left: rem(3);
+            top: rem(2) !important;
+        }
+
+        &:hover {
+            @extend %color-primary;
+        }
+
+        .btn & {
+            #{$left}: 6px;
+        }
+
+        .btn:hover & {
+            i {
+                @extend %color-primary;
+            }
+
+        }
+    }
+
+    &--outline-white {
+        box-shadow: 0 0 0 2px $color-white;
+        color: $color-white;
+
+        &:hover {
+            color: $color-white;
+            box-shadow: 0 0 0 10px rgba($color-white, .2);
+        }
+
+        i {
+            margin-left: rem(4);
+            top: rem(2);
+        }
+
+        &.media-player-icon--xs {
+            i {
+                margin-left: rem(2);
+                top: rem(1);
+            }
+
+        }
+    }
+}

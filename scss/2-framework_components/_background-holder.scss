@@ -1,0 +1,84 @@
+// DESCRIPTION:
+// We have used the background images directly as inline css in HTML. Actaully it gives us more control to handle the image for Wordpress conversion. 
+
+// MARKUP:
+// <div class="background-holder background-holder--circle">
+//    <img src="img/oval.svg" alt="oval" class="background-image-holder">
+// </div>
+
+// <a class="btn" href="#">
+//   <span class="btn__text">Button Title</span>
+// </a>
+//
+// MODIFIERS:
+// background-holder--cover - css background size cover
+// background-holder--contain - css background size contain
+// background-holder--auto - css background size auto
+// background-holder--center - css background position center
+// background-holder--bottom - css background position bottom
+// background-holder--left - css background position left
+// background-holder--top - css background position top
+// background-holder--left-top - css background position left-top
+// background-holder--right-top - css background position right-top
+
+
+.background-holder {
+  @include pos-abs(0, auto, auto, 0);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--circle {
+    background-size: initial;
+    background-position: $left top;
+    top: rem(-128);
+  }
+
+  &--cover {
+    background-size: cover;
+  }
+  &--contain {
+    background-size: contain;
+  }
+  &--auto {
+    background-size: auto;
+  }
+  &--center {
+    background-position: center;
+  }
+  &--bottom {
+    background-position: bottom;
+  }
+  &--left {
+    background-position: $left;
+  }
+  &--top {
+    background-position: top;
+  }
+  &--left-top {
+    background-position: $left top;
+  }
+  &--right-top {
+    background-position: $right top;
+  }
+  &--left-bottom {
+    background-position: $left bottom;
+  }
+  &--right-bottom {
+    background-position: $right bottom;
+  }
+}
+
+.svg-shape {
+  @include pos-abs(auto, 0px, -2px, 0);
+
+  &--top {
+    @include pos-abs(-2px, 0px, auto, 0);
+  }
+
+  @include rtl {
+    transform: scaleX(-1);
+  }
+}

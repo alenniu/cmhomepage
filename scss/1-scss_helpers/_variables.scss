@@ -1,0 +1,99 @@
+//  Color palette 
+// =============================================================
+
+// Main Colors
+$color-white:                                                               #fff!default;
+$color-primary:                                                             #2f5bea!default;
+$color-blue-2:                                                              #5179ec!default;
+$color-indigo:                                                              #3A6CC5!default;
+$color-on-light-primary:                                                    #2c2e30!default;
+$color-on-light-secondary:                                                  #54565a!default;
+$color-on-light-secondary-2:                                                #7e8085!default;
+$dark-blue-grey:                                                            #c5d0e6!default;
+$light-blue-grey:                                                           #e3e4e6!default;
+$cadillac:                                                                  #a6546e!default;
+$paradiso:                                                                  #2A7871!default;
+$coral:                                                                     #fc5c42!default;
+$bright-yellow:                                                             #f5e658!default;
+$very-light-blue:                                                           #e7eaee!default;
+$iron:                                                                      #D2D5DA!default;
+$pale-grey:                                                                 #f6f8f9!default;
+$dark-grey:                                                                 #2D3136!default;
+$slate:                                                                     #545f75!default;
+$darkblue:                                                                  #151c32!default;
+$midnight:                                                                  #01081f!default;
+$cloud-burst:                                                               #1E2745!default;
+
+// Theme colors
+$theme-green:                                                               #27ae60!default;
+$theme-violet:                                                              #9b59b6!default;
+$theme-firoza:                                                              #16a085!default;
+$theme-red:                                                                 #e74c3c!default;
+$theme-orange:                                                              #ee8663!default;
+
+// Theme gradients
+$gradient-1:                                                                 linear-gradient(-45deg, #2f1ce0 0%, #53a0fd 50%, #51eca5 100%)!default;
+$gradient-2:                                                                 linear-gradient(90deg, #0099FF 0%, #6610f2 100%)!default;
+$gradient-3:                                                                 linear-gradient(150deg, #2d1582 0%, #19a0ff 100%)!default;
+$gradient-4:                                                                 linear-gradient(to right, #642B73 0%, #C6426E 100%)!default;
+$gradient-5:                                                                 linear-gradient(150deg, #1A6B89 0%, #2A7871 100%)!default;
+$gradient-6:                                                                 linear-gradient(-134deg, #C86DD7 0%, #3023AE 100%)!default;
+
+// dark theme
+// =============================================================
+
+$theme-dark:                                                                "[data-theme="dark"]"!default;
+
+// base font settings
+// =============================================================
+
+$base-unit:                                                                 16!default;
+$base-line-height:                                                          1rem!default;
+
+// icon font path
+// =============================================================
+$fa-font-path: "../icons";
+$icon-font-path: "../icons";
+
+// fonts family
+// =============================================================
+
+$font-primary:                                                              'Aileron', sans-serif!default;
+$font-secondary:                                                            'Noto Serif', serif!default;
+$font-body:                                                                 'Aileron', sans-serif!default;
+
+// font family all
+// =============================================================
+
+$font-all:                                                                  $font-body, $font-primary!default;
+
+// font size
+// =============================================================
+
+$h1-size:                                                                   rem(60)!default;
+$h2-size:                                                                   rem(48)!default;
+$h3-size:                                                                   rem(34)!default;
+$h4-size:                                                                   rem(28)!default;
+$h5-size:                                                                   rem(24)!default;
+$h6-size:                                                                   rem(18)!default;
+$body-font-size:                                                            rem(16)!default;
+$fine-print-size:                                                           rem(14)!default;
+$font-size-14:                                                              rem(14)!default;
+$font-size-21:                                                              rem(21)!default;
+
+$h1-line-height:                                                            1.2!default;
+$h2-line-height:                                                            1.25!default;
+$h3-line-height:                                                            1.35!default;
+$h4-line-height:                                                            1.4!default;
+$h5-line-height:                                                            1.6!default;
+$h6-line-height:                                                            1.9!default;
+$body-line-height:                                                          1.75!default;
+
+// Spacer
+// =============================================================
+
+$standard-space:                                                            $base-line-height * 8!default;
+
+// Box layout width
+// =============================================================
+$box-layout-width:                                                            1366px!default;

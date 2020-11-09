@@ -1,0 +1,185 @@
+/**! ----- overflow---- **/
+.hidden {
+        overflow: hidden;
+}
+
+/**! ----- Z Index---- **/
+.z-index1 {
+        z-index: 1;
+}
+
+.z-index2 {
+        z-index: 2;
+}
+
+.z-index-1 {
+        z-index: -1;
+}
+
+.z-index-2 {
+        z-index: -2;
+}
+
+/**! ----- border radius---- **/
+.rounded-default {
+        border-radius: rem(5)
+}
+
+.rounded-sm {
+        border-radius: rem(3)
+}
+
+.rounded-md {
+        border-radius: rem(10)
+}
+
+.rounded-lg {
+        border-radius: rem(15)
+}
+
+.rounded-full {
+        border-radius: rem(100)
+}
+
+/**! ----- Position ---- **/
+.pos-abs-top {
+        @include pos-abs(0, auto, auto, auto)
+}
+
+.pos-abs-bottom {
+        @include pos-abs(auto, auto, 0, auto)
+}
+
+.pos-abs-lg-bottom {
+        @include media (lg) {
+                @include pos-abs(auto, auto, 0, auto)
+        }
+}
+
+.pos-abs-bottom-left {
+        @include pos-abs(auto, auto, 0, 0)
+}
+
+.pos-abs-bottom-right {
+        @include pos-abs(auto, 0, 0, auto)
+}
+
+.pos-abs-top-right {
+        @include pos-abs(0, 0, auto, auto)
+}
+
+.pos-abs-top-left {
+        @include pos-abs(0, auto, auto, 0)
+}
+
+.pos-center {
+        @include centerer;
+}
+
+.pos-horizon-center {
+        @include centerer (true, false);
+}
+
+.pos-vertical-center {
+        @include centerer (false, ture);
+        
+}
+@include media(lg){
+        .pos-abs-lg-top-right {
+                @include pos-abs(0, 0, auto, auto)
+        }      
+        .pos-abs-lg-top-left {
+                @include pos-abs(0, auto, auto, 0)
+        }      
+}
+
+.pos-fixed-bottom {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+}
+
+/**! ----- Opacity ---- **/
+.opacity-05 {
+        opacity: .05;
+}
+
+.opacity-10 {
+        opacity: .10;
+}
+
+.opacity-20 {
+        opacity: .20;
+}
+
+.opacity-30 {
+        opacity: .30;
+}
+
+/**! ----- Border---- **/
+
+.border-bottom-light {
+        border-bottom: 1px solid $very-light-blue;
+
+        #{$theme-dark} &,
+        .bg-color-darkblue & {
+                border-bottom: 1px solid $darkblue;
+        }
+
+        .bg-color-darkblue & {
+                border-bottom: 1px solid $cloud-burst;
+        }
+
+        .bg-color-primary & {
+                border-bottom: 1px solid rgba($color-white, $alpha: .2);
+        }
+}
+
+.border-none {
+        border: 0;
+}
+
+.outline-light {
+        box-shadow: 0 0 0px 1px $very-light-blue;
+}
+
+/**! ----- height emulator---- **/
+.height-emulator {
+        float: left;
+}
+
+/**! ----- transition---- **/
+.transition-default {
+        transition: .3s;
+}
+
+/**! ----- box shadow---- **/
+.box-shadow-1 {
+        box-shadow: 0 rem(3) rem(5) 0 rgba(44, 46, 48, 0.1);
+}
+
+.box-shadow-2 {
+        box-shadow: 0 rem(8) rem(30) rgba(0, 0, 0, 0.15);
+}
+
+/**! ----- Divider---- **/
+
+.hr {
+        &--blod {
+                @extend .border-primary;
+                border-width: 2px;
+        }
+}
+
+/**! ----- Height---- **/
+.h-100vh {
+        height: 100vh;
+}
+
+@include media(lg) {
+        .h-lg-100vh {
+                height: 100vh;
+        }
+}
+
